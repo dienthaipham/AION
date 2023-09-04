@@ -1,0 +1,112 @@
+.color-slider {
+    position: relative;
+
+    #color-placeholder {
+        opacity: 0;
+        position: relative;
+        pointer-events: none;
+        display: block;
+    }
+
+    > img {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+        transition: opacity 0.3s linear;
+        pointer-events: none;
+
+        &.active {
+            opacity: 1;
+            transition: none;
+        }
+    }
+
+    .slider-pagination {
+        width: 70%;
+        padding: 0 34px 40px;
+        background: linear-gradient(
+            180deg,
+            #ebf1f8 0%,
+            rgba(235, 243, 255, 0.7) 100%
+        );
+        border-radius: 5px;
+        opacity: 0.9;
+        flex-wrap: nowrap;
+        z-index: 10;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        transition: 0.3s opacity;
+
+        > .color-wrapper {
+            flex: 1;
+            max-width: 92px;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            font-weight: 500;
+            color: #3d5a74;
+            width: auto;
+            text-align: center;
+            margin: 0 12px;
+            padding: 0;
+            height: 100%;
+            padding-top: 3.25%;
+            padding-bottom: 17px;
+            box-sizing: border-box;
+            position: relative;
+            line-height: 1.3;
+            cursor: pointer;
+
+            > .color-img-wrapper {
+                display: inline-block;
+                border-radius: 50%;
+                border: 2px solid transparent;
+                padding: 5px;
+                margin: 0 auto;
+                box-sizing: border-box;
+
+                &.active {
+                    border-color: #fff;
+                }
+
+                > img {
+                    opacity: 1;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    vertical-align: middle;
+                    border: 0;
+                }
+            }
+
+            .color-label {
+                display: inline-block;
+                z-index: 999;
+                line-height: 20px;
+                padding-top: 20px;
+            }
+        }
+
+        .color-slider-tips {
+            position: absolute;
+            bottom: 17px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 300;
+            color: #3d5a74;
+            line-height: 22px;
+            z-index: 11;
+        }
+    }
+}

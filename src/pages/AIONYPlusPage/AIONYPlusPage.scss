@@ -1,0 +1,38 @@
+.aionyplus-section-slide {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    position: relative;
+    transition-duration: 0ms;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+
+    .swiper-slide-6-btn {
+        display: inline-flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 28%;
+        z-index: 22;
+        color: #fff;
+    }
+
+    .swiper-slide-6-btn > span {
+        display: inline-block;
+        width: 210px;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+    .swiper-slide-6-btn > span:hover {
+        background-color: #fff;
+        color: black !important;
+    }
+}

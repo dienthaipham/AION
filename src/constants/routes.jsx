@@ -1,23 +1,28 @@
+import AIONYPlusPage from '../pages/AIONYPlusPage';
+import HyperLabPage from '../pages/HyperLabPage';
+import ServicePage from '../pages/ServicePage';
+import AIONSPage from '../pages/AIONSPage';
+
 export const MAIN_ROUTES = [
     {
         name: 'AION Y Plus',
         path: '/vehicles/aion_y_plus',
-        element: <>AION Y Plus</>,
+        element: <AIONYPlusPage />,
     },
     {
         name: 'AION S',
         path: '/vehicles/aion_s',
-        element: <>AION S</>,
+        element: <AIONSPage />,
     },
     {
         name: '服务',
         path: '/show/25hours',
-        element: <>Services</>,
+        element: <ServicePage />,
     },
     {
         name: '昊铂科研实验室',
         path: '/show/science',
-        element: <>Hyper Lab</>,
+        element: <HyperLabPage />,
     },
 ];
 

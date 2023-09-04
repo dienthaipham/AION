@@ -1,0 +1,148 @@
+.aions-section-slide {
+    position: relative;
+
+    width: 100%;
+    min-width: 1024px;
+    font-size: 14px;
+    font-family: system, -apple-system, BlinkMacSystemFont, PingFang SC,
+        Segoe UI, Microsoft YaHei, wenquanyi micro hei, Hiragino Sans GB,
+        Hiragino Sans GB W3, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+        Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-weight: 300;
+
+    .any-main-hd {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        color: #4b526a;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .any-hd-text {
+        font-size: 20px;
+        color: #303745;
+        letter-spacing: 20px;
+        text-align: center;
+        line-height: 28px;
+        margin-bottom: 17px;
+    }
+
+    .any-hd-icon img {
+        width: 339px;
+        height: auto;
+        margin: 0;
+        vertical-align: middle;
+    }
+
+    .any-hd-des {
+        font-size: 24px;
+        line-height: 37px;
+        letter-spacing: 10px;
+        padding: 26px 0 36px 0;
+    }
+
+    .any-btn {
+        color: #303745;
+    }
+
+    .any-btn span:first-of-type {
+        margin-right: 20px;
+    }
+
+    .any-btn span {
+        display: inline-block;
+        width: 210px;
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 5px;
+        border: 2px solid #303745;
+        cursor: pointer;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+    }
+
+    .swiper-wrapper {
+        transform: translate3d(0, 0, 0);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        box-sizing: content-box;
+    }
+
+    .swiper-slide {
+        height: auto;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    font-family: system, -apple-system, BlinkMacSystemFont, PingFang SC,
+        Segoe UI, Microsoft YaHei, wenquanyi micro hei, Hiragino Sans GB,
+        Hiragino Sans GB W3, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+        Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-weight: 300;
+}
+
+.swiper-wrapper .any-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 22;
+    color: #fff;
+}
+
+.swiper-wrapper .any-btn span {
+    border: 2px solid #ffffff;
+}
+
+.any-btn span:first-of-type {
+    margin-right: 20px;
+}
+.swiper-wrapper .any-btn span {
+    border: 2px solid #ffffff;
+}
+.any-btn span {
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}

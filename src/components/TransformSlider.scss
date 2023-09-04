@@ -1,0 +1,53 @@
+.transform-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+
+    .image-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+
+        &__slide-image {
+            flex: 0 0 100%;
+            height: auto;
+            width: 100%;
+        }
+
+        &.dragging {
+            transition: transform 0s ease-in-out;
+        }
+    }
+
+    .slider-pagination {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: center;
+        justify-content: center;
+        transition: 0.2s opacity;
+        z-index: 10;
+        font-size: 18px;
+        font-weight: 400;
+        color: #fff;
+        gap: 52px;
+
+        &__item {
+            opacity: 0.6;
+            border-top: 1px solid #fff;
+            padding: 8px;
+            flex: 1;
+            max-width: 240px;
+            text-align: left;
+            cursor: pointer;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}

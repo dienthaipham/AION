@@ -13,7 +13,6 @@ function Header(props) {
     const aboutRef = useRef(null);
     const [clickedAbout, setClickedAbout] = useState(false);
 
-    // ****mobile*****
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
     const [openAboutMenu, setOpenAboutMenu] = useState(false);
     const [switchPage, setSwitchPage] = useState(false);
