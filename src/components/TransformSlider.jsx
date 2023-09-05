@@ -105,7 +105,10 @@ const TransformSlider = ({ optionsData }) => {
                         }`}
                         onClick={() => setActiveImageIndex(index)}
                     >
-                        {option.optionLabel}
+                        <div>{option.optionLabel}</div>
+                        {
+                            option.subLabel && <div>{option.subLabel}</div>
+                        }
                     </div>
                 ))}
             </div>

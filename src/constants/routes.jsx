@@ -4,9 +4,14 @@ import ServicePage from '../pages/ServicePage';
 import AIONSPage from '../pages/AIONSPage';
 
 export const MAIN_ROUTES = [
+    // {
+    //     name: 'AION Y Plus',
+    //     path: '/vehicles/aion_y_plus',
+    //     element: <AIONYPlusPage />,
+    // },
     {
         name: 'AION Y Plus',
-        path: '/vehicles/aion_y_plus',
+        path: '/',
         element: <AIONYPlusPage />,
     },
     {

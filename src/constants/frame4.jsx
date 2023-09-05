@@ -1,8 +1,38 @@
-export const OPTION_DATA = [
-    'https://www.aion.com.cn/Public/Uploads/Picture/images/2023/01/854319596587115592575676589585.jpg',
-    'https://www.aion.com.cn/Public/Uploads/Picture/images/2023/01/741451197959296541455642331384.jpg',
-    'https://www.aion.com.cn/Public/Uploads/Picture/images/2023/01/241862449119792821929411653917.jpg',
-    'https://www.aion.com.cn/Public/Uploads/Picture/images/2023/01/374424228939936789172634678132.jpg',
-    'https://www.aion.com.cn/Public/Uploads/Picture/images/2021/03/225876281236661947685217639478.jpg',
-    'https://www.aion.com.cn/Public/Uploads/Picture/images/2023/01/779418215938914451892123678841.jpg',
+export const OPTION1_DATA = [
+    {
+        imageUrl:
+            'https://www.aion.com.cn/web/pc/images/website-science/tech-s2-a1-new.jpg?v=1675568853543',
+        optionLabel: 'ADiGO 3.0',
+        subLabel: '智驾辅助系统'
+    },
+    {
+        imageUrl:
+            'https://www.aion.com.cn/web/pc/images/website-science/tech-s2-a2.jpg?v=1675568853543',
+        optionLabel: 'ADiGO 3.0',
+        subLabel: '智驾互联生态系统'
+    },
+    {
+        imageUrl:
+            'https://www.aion.com.cn/web/pc/images/website-science/tech-s2-a3.jpg?v=1675568853543',
+        optionLabel: '5G+V-BOX',
+        subLabel: '车载通讯技术'
+    },
+];
+
+export const OPTION2_DATA = [
+    {
+        imageUrl:
+            'https://www.aion.com.cn/web/pc/images/website-science/tech-s4-a1.jpg?v=1675568853547',
+        optionLabel: '双重保障',
+    },
+    {
+        imageUrl:
+            'https://www.aion.com.cn/web/pc/images/website-science/tech-s4-a2.jpg?v=1675568853547',
+        optionLabel: '车载中药香氛系统',
+    },
+    {
+        imageUrl:
+            'https://www.aion.com.cn/web/pc/images/website-science/tech-s4-a3.jpg?v=1675568853547',
+        optionLabel: '太阳能汽车技术',
+    },
 ];

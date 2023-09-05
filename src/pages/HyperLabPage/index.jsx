@@ -1,25 +1,8 @@
 import React from 'react';
-import { TransformSlider } from '../../components';
-import Section from '../../components/Section';
+import { TransformSlider, Section } from '../../components';
 // import MovingSlider from '../../components/MovingSlider';
+import { OPTION1_DATA, OPTION2_DATA } from '../../constants/frame4';
 
-export const OPTION4_DATA = [
-    {
-        imageUrl:
-            'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/cebee12f-73dc-4406-bc49-6727d7b13663.jpg',
-        optionLabel: '17英寸钢轮辋(带饰盖)',
-    },
-    {
-        imageUrl:
-            'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/6d1c09fa-8889-4688-973f-43e8183cf101.jpg',
-        optionLabel: '17英寸铝合金轮辋',
-    },
-    {
-        imageUrl:
-            'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/65c8da42-59f0-480c-bf4e-d15d1dc1b0b4.jpg',
-        optionLabel: '18英寸铝合金轮辋',
-    },
-];
 
 function HyperLabPage(props) {
     return <>
@@ -29,9 +12,12 @@ function HyperLabPage(props) {
     <Section alt='04' src='https://www.aion.com.cn/web/pc/images/website-science/4-1.jpg?v=1678697126261'/>
     <Section alt='05' src='https://www.aion.com.cn/web/pc/images/website-science/5-1.jpg?v=1671678241964'/>
     <Section alt='06' src='https://www.aion.com.cn/web/pc/images/website-science/tech-s1-bg-new.jpg'/>
-    <TransformSlider optionsData={OPTION4_DATA} />
+    <TransformSlider optionsData={OPTION1_DATA} />
+    <TransformSlider optionsData={OPTION2_DATA} />
+    <Section alt='07' src='https://www.aion.com.cn/web/pc/images/website-science/tech-s5-1.jpg'/>
+    <Section alt='08' src='https://www.aion.com.cn/web/pc/images/website-science/tech-s5-2.jpg?v=1677657332157'/>
+    <Section alt='09' src='https://www.aion.com.cn/web/pc/images/website-science/tech-s5-3.jpg'/>
     </>
-    return <TransformSlider optionsData={OPTION4_DATA} />;
 }
 
 export default HyperLabPage;
