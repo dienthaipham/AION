@@ -2,6 +2,7 @@ import AIONYPlusPage from '../pages/AIONYPlusPage';
 import HyperLabPage from '../pages/HyperLabPage';
 import ServicePage from '../pages/ServicePage';
 import AIONSPage from '../pages/AIONSPage';
+import WordPressSinglePage from '../components/WordPressSinglePage';
 
 export const MAIN_ROUTES = [
     // {
@@ -45,7 +46,7 @@ export const ABOUT_ROUTES = [
     {
         name: '新闻资讯',
         path: '/show/news',
-        element: <>About 3</>,
+        element: <WordPressSinglePage />,
     },
     {
         name: '人才招聘',
