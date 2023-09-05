@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Header } from './components';
+import { Footer, Header } from './components';
 import { ABOUT_ROUTES, MAIN_ROUTES } from './constants/routes';
 import AIONYPlusPage from './pages/AIONYPlusPage';
 import './App.scss';
@@ -27,6 +27,7 @@ const App = () => {
                     />
                 ))}
             </Routes>
+            <Footer />
             {/* </div> */}
         </BrowserRouter>
     );

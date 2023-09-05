@@ -1,5 +1,6 @@
 import React from 'react';
 import { TransformSlider } from '../../components';
+import Section from '../../components/Section';
 // import MovingSlider from '../../components/MovingSlider';
 
 export const OPTION4_DATA = [
@@ -21,6 +22,15 @@ export const OPTION4_DATA = [
 ];
 
 function HyperLabPage(props) {
+    return <>
+    <Section alt='01' src='https://www.aion.com.cn/web/pc/images/website-science/1-1.jpg?v=1671678241964'/>
+    <Section alt='02' src='https://www.aion.com.cn/web/pc/images/website-science/2-1.jpg?v=1671678241964'/>
+    <Section alt='03' src='https://www.aion.com.cn/web/pc/images/website-science/3-1.jpg?v=1671678241964'/>
+    <Section alt='04' src='https://www.aion.com.cn/web/pc/images/website-science/4-1.jpg?v=1678697126261'/>
+    <Section alt='05' src='https://www.aion.com.cn/web/pc/images/website-science/5-1.jpg?v=1671678241964'/>
+    <Section alt='06' src='https://www.aion.com.cn/web/pc/images/website-science/tech-s1-bg-new.jpg'/>
+    <TransformSlider optionsData={OPTION4_DATA} />
+    </>
     return <TransformSlider optionsData={OPTION4_DATA} />;
 }
 

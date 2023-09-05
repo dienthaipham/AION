@@ -43,30 +43,45 @@ const Section1 = () => {
 
 const Section2 = () => {
     return (
-        <div className="swiper-wrapper" id="pageSwiper0">
+        <div className="swiper-wrapper">
             <div className="any-btn" style={{ top: '35%' }}>
-                <span
-                    onclick="toPlusMore()"
-                    style={{
-                        width: 'auto',
-                        marginRight: '0',
-                        padding: '10px 30px',
-                    }}
-                >
+                <span>
                     前往了解AION S Plus
                 </span>
             </div>
             <div
                 className="swiper-slide swiper-slide-active"
-                // style="width: 1127px; opacity: 1; transform: translate3d(0px, 0px, 0px);"
                 style={{
-                    width: '1127px',
                     opacity: 1,
                     transform: 'translate3d(0px, 0px, 0px)',
                 }}
             >
                 <img
                     src="https://www.aion.com.cn/web/pc/images/aion-s-new/8-1.jpeg?v=1691548923807"
+                    alt="广汽埃安Y"
+                />
+            </div>
+        </div>
+    );
+};
+
+const Section4 = () => {
+    return (
+        <div className="swiper-wrapper">
+            <div className="any-btn" style={{ top: '28%' }}>
+                <span>
+                    查看详细参数
+                </span>
+            </div>
+            <div
+                className="swiper-slide swiper-slide-active"
+                style={{
+                    opacity: 1,
+                    transform: 'translate3d(0px, 0px, 0px)',
+                }}
+            >
+                <img
+                    src="https://www.aion.com.cn/web/pc/images/aion-s-new/10-1.jpeg?v=1691548923807"
                     alt="广汽埃安Y"
                 />
             </div>
@@ -96,12 +111,7 @@ function AIONSPage() {
         },
         {
             id: '动力',
-            Component: (
-                <Section
-                    alt="04"
-                    src="https://www.aion.com.cn/web/pc/images/aion-s-new/10-1.jpeg?v=1691548923807"
-                />
-            ),
+            Component: <Section4 />,
         },
 
         {
