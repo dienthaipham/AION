@@ -3,6 +3,10 @@ import HyperLabPage from '../pages/HyperLabPage';
 import ServicePage from '../pages/ServicePage';
 import AIONSPage from '../pages/AIONSPage';
 import WordPressSinglePage from '../components/WordPressSinglePage';
+import About06Page from '../pages/About06Page';
+import About05Page from '../pages/About05Page';
+import About04Page from '../pages/About04Page';
+import About03Page from '../pages/About03Page';
 
 export const MAIN_ROUTES = [
     // {
@@ -46,21 +50,21 @@ export const ABOUT_ROUTES = [
     {
         name: '新闻资讯',
         path: '/show/news',
-        element: <WordPressSinglePage />,
+        element: <About03Page />,
     },
     {
         name: '人才招聘',
         path: '/show/join',
-        element: <>About 4</>,
+        element: <About04Page />,
     },
     {
         name: '合作加盟',
         path: '/show/cooperation',
-        element: <>About 5</>,
+        element: <About05Page />,
     },
     {
         name: '信息公示',
         path: '/information/announcement',
-        element: <>About 6</>,
+        element: <About06Page />,
     },
 ];

@@ -1,0 +1,115 @@
+.rlzy-box {
+    width: 74%;
+    margin: 0 auto;
+    margin-bottom: 64px;
+}
+
+.tit-img {
+    text-align: center;
+    margin: 6.5% 0 4% 0;
+}
+
+.tit-img img {
+    width: 50%;
+    vertical-align: middle;
+    border: 0;
+}
+
+.rlzy-box .dis {
+    text-indent: 2em;
+    line-height: 30px;
+    font-size: 17px;
+    margin: 0 0 10px;
+}
+
+.rlzy-box .zplc-box {
+    text-align: center;
+    margin: 6% 0;
+    position: relative;
+}
+
+.rlzy-box .zplc-box .list {
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.rlzy-box .zplc-box .list li {
+    cursor: pointer;
+    float: left;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    color: #333;
+    font-size: 19px;
+    margin-right: 16.7%;
+    border: 1px solid #0daabc;
+    padding: 0.7%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.rlzy-box .zplc-box .list .on {
+    width: 85px;
+    height: 85px;
+    background: #00a5b8;
+    color: #fff;
+    font-size: 21px;
+    padding: 1%;
+    top: -40px !important;
+}
+
+.rlzy-box .zplc-box .list li:nth-child(1) {
+    position: absolute;
+    left: 5%;
+    top: -30px;
+}
+
+.rlzy-box .zplc-box .list li:nth-child(2) {
+    position: absolute;
+    left: 25%;
+    top: -30px;
+}
+
+.rlzy-box .zplc-box .list li:nth-child(3) {
+    position: absolute;
+    left: 47%;
+    top: -30px;
+}
+
+.rlzy-box .zplc-box .list li:nth-child(4) {
+    position: absolute;
+    left: 70%;
+    top: -30px;
+}
+
+.rlzy-box .zplc-box .list li:nth-child(5) {
+    position: absolute;
+    left: 90%;
+    top: -30px;
+}
+
+.rlzy-box .zplc-box .line {
+    width: 89%;
+    margin: 0 auto;
+    border-bottom: 1px dashed #00a5b8;
+}
+
+.rlzy-box .week-on {
+    display: block !important;
+}
+
+.rlzy-box .content {
+    min-height: 195px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.rlzy-box .dis {
+    text-indent: 2em;
+    line-height: 30px;
+    font-size: 17px;
+    margin: 0 0 10px;
+}
