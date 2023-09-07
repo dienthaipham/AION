@@ -45,7 +45,7 @@ export const ABOUT_ROUTES = [
     {
         name: '北鼻一家',
         path: '/show/unicorn',
-        element: <>About 2</>,
+        element: <WordPressSinglePage />,
     },
     {
         name: '新闻资讯',

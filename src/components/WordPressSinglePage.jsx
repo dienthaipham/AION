@@ -6,25 +6,35 @@ const TOKEN =
 const WordPressSinglePage = () => {
     const [pageContent, setPageContent] = useState(null);
 
-    // useEffect(() => {
-    //     fetch('http://172.104.167.168:32768/wp-json/wp/v2/pages/18')
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             setPageContent(data.content.rendered);
-    //         })
-    //         .catch((error) => console.log('Error fetching page:', error));
-    // }, []);
-
     useEffect(() => {
-        fetch('http://localhost:1337/api/Articles?populate=*', {
-            headers: {
-                'Authorization': `Bearer ${TOKEN}`,
-            },
-        })
+        fetch('http://172.104.167.168:32768/wp-json/wp/v2/pages/18')
             .then((response) => response.json())
-            .then((data) => console.log(data))
-            .catch((error) => console.log('Error:', error));
+            .then((data) => {
+                setPageContent(data.content.rendered);
+            })
+            .catch((error) => console.log('Error fetching page:', error));
     }, []);
+
+    // /wp-json/custom/v1/get_css_for_page/YOUR_PAGE_ID
+    useEffect(() => {
+        fetch('http://172.104.167.168:32768/wp-json/custom/v1/get_css/18')
+            .then((response) => response.json())
+            .then((data) => {
+                console.log({ data });
+            })
+            .catch((error) => console.log('Error fetching page:', error));
+    }, []);
+
+    // useEffect(() => {
+    //     fetch('http://localhost:1337/api/Articles?populate=*', {
+    //         headers: {
+    //             'Authorization': `Bearer ${TOKEN}`,
+    //         },
+    //     })
+    //         .then((response) => response.json())
+    //         .then((data) => console.log(data))
+    //         .catch((error) => console.log('Error:', error));
+    // }, []);
 
     return (
         <div>
