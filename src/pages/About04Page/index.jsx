@@ -11,14 +11,17 @@ function About04Page(props) {
     return (
         <div>
             <Section src={TestImg} alt='' />
+
             <div className='rlzy-box'>
-                <div className='tit-img'>
+                <div className='rlzy-box__tit-img'>
                     <img src='https://www.aion.com.cn/web/pc/images/rlzy-tit.png?v=1658219070649' />
                 </div>
-                <p className='dis'>
+
+                <p className='rlzy-box__dis'>
                     人才是第一资源，创新是第一动力。公司坚持“创新驱动，人才先行”，着力打造助推埃安事业快速发展的强劲“人才驱动力”，打造一支在行业内领先的创新型人才队伍。
                 </p>
-                <div className='zplc-box'>
+
+                <div className='rlzy-box__zplc-box'>
                     <ul className='list clearfix'>
                         {steps.map((item, index) => (
                             <li
@@ -32,7 +35,7 @@ function About04Page(props) {
                 </div>
 
                 {activeIndex === 0 && (
-                    <div className='content'>
+                    <div className='rlzy-box__content'>
                         <p className='dis'>
                             公司愿景：成为世界领先和社会信赖的绿色智慧移动价值创造者。
                         </p>
@@ -42,7 +45,7 @@ function About04Page(props) {
                 )}
 
                 {activeIndex === 1 && (
-                    <div className='content week-on'>
+                    <div className='rlzy-box__content week-on'>
                         <p className='dis'>
                             公司坚持“五湖四海、广纳贤才”的人才招聘战略，以广汽系统内企业高素质业务骨干组成的核心团队为基础，广泛吸纳各界优秀人才，建立高效的埃安人才梯队。
                         </p>
@@ -50,7 +53,7 @@ function About04Page(props) {
                 )}
 
                 {activeIndex === 2 && (
-                    <div className='content'>
+                    <div className='rlzy-box__content'>
                         <p className='dis'>
                             公司创新设计了“全面薪酬体系”，将提供在行业内富有竞争力的薪酬待遇。创新人才激励体系，构建科学、先进的全面薪酬激励体系，激发人才的创业激情！
                         </p>
@@ -74,7 +77,7 @@ function About04Page(props) {
                 )}
 
                 {activeIndex === 3 && (
-                    <div className='content'>
+                    <div className='rlzy-box__content'>
                         <p className='dis'>
                             公司以构建学习型组织为导向，依托广汽大学、埃安人才培训中心的平台，针对新大学生，专门设立“埃安菁英成长训练营”（2018年荣获广汽集团优秀培训项目“金奖”）。“埃安菁英成长训练营”采取理论培训、工厂见习、25hours体验店见习、户外拓展、“导师制”等创新的多元化培养方式，帮助每一位新大学生融入团队、提升能力、快速成长。
                         </p>
@@ -85,7 +88,7 @@ function About04Page(props) {
                 )}
 
                 {activeIndex === 4 && (
-                    <div className='content'>
+                    <div className='rlzy-box__content'>
                         <p className='dis'>
                             公司创新建立了“三条跑道”（管理、专业、操作类），大大拓展了员工的职业发展通道。建立公正、公平、公开的体制。公司大力推进干部年轻化，大胆选拨、任用年轻干部，使优秀员工及时得到肯定、成长及激励。
                         </p>

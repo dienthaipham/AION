@@ -1,6 +1,6 @@
 import React from 'react';
-import './About05Page.scss';
 import { Section } from '../../components';
+import './About05Page.scss';
 
 function About05Page(props) {
     return (
