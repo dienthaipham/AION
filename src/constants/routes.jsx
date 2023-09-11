@@ -7,6 +7,7 @@ import About06Page from '../pages/About06Page';
 import About05Page from '../pages/About05Page';
 import About04Page from '../pages/About04Page';
 import About03Page from '../pages/About03Page';
+import About01Page from '../pages/About01Page';
 
 export const MAIN_ROUTES = [
     // {
@@ -40,7 +41,7 @@ export const ABOUT_ROUTES = [
     {
         name: '关于埃安',
         path: '/show/about_us',
-        element: <>About 1</>,
+        element: <About01Page />,
     },
     {
         name: '北鼻一家',

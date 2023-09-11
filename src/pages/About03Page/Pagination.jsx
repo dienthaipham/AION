@@ -1,29 +1,24 @@
 import React, { useState } from 'react';
+import './Pagination.scss';
 
 function Pagination(props) {
     const [total, setTotal] = useState(15);
     const [activeIndex, setActiveIndex] = useState(1);
 
     const createList = () => {
-        let list = [];
         let category = 'center';
         if (activeIndex + 2 >= total) category = 'right';
         if (activeIndex - 2 <= 1) category = 'left';
 
         switch (category) {
             case 'left':
-                list = [1, 2, 3, 4, 5, '...', total];
-                break;
+                return [1, 2, 3, 4, 5, '...', total];
             case 'right':
-                console.log('right');
-                list = [1, '...', total - 4, total - 3, total - 2, total - 1, total];
-                break;
+                return [1, '...', total - 4, total - 3, total - 2, total - 1, total];
             case 'center':
-                list = [1, '...', activeIndex - 1, activeIndex, activeIndex + 1, '...', total];
-                break;
+                return [1, '...', activeIndex - 1, activeIndex, activeIndex + 1, '...', total];
         }
-
-        return list;
+        return [];
     };
 
     const handlePrev = () => {
@@ -36,13 +31,13 @@ function Pagination(props) {
 
     return (
         <div class='page-box'>
-            <ul class='pagination' id='page-box'>
-                <li data-ol-has-click-handler=''>
+            <ul class='pagination'>
+                <li>
                     <a aria-label='Previous' onClick={() => setActiveIndex(1)}>
                         «
                     </a>
                 </li>
-                <li data-ol-has-click-handler=''>
+                <li>
                     <a onClick={handlePrev}>上一页</a>
                 </li>
                 {createList().map((item) => {
@@ -60,10 +55,10 @@ function Pagination(props) {
                         </li>
                     );
                 })}
-                <li data-ol-has-click-handler=''>
+                <li>
                     <a onClick={handleNext}>下一页</a>
                 </li>
-                <li data-ol-has-click-handler=''>
+                <li>
                     <a aria-label='Next' onClick={() => setActiveIndex(total)}>
                         »
                     </a>
