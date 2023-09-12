@@ -1,11 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import classNames from 'classnames';
 import './About01Page.scss';
+import Events from './Events';
+import { EVENTS } from '../../constants/about1';
+import VideoFrame from './VideoFrame';
 
 const sections = ['埃安', '智联产业园', '新能源工厂'];
 
+const SWIPE_THRESHOLD = 200; // Time in milliseconds
+
 function About01Page(props) {
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const [startX, setStartX] = useState(0);
+    const [currentTranslateX, setCurrentTranslateX] = useState(0);
+    const [deltaX, setDeltaX] = useState(0);
+
+    const sliderRef = useRef(null);
+    const startCurrentTranslateX = useRef(0);
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragStartTime, setDragStartTime] = useState(0);
+
+    const handleMouseDown = (event) => {
+        setIsDragging(true);
+        setStartX(event.clientX);
+        setDragStartTime(Date.now());
+    };
+
+    const handleMouseMove = (event) => {
+        if (!isDragging || !sliderRef.current) return;
+
+        const newTranslateX = Math.round(event.clientX - startX) + startCurrentTranslateX.current;
+        setCurrentTranslateX(newTranslateX);
+        setDeltaX(event.clientX - startX);
+    };
+
+    const handleMouseUp = () => {
+        let newTranslateX = currentTranslateX;
+        const scaleTranslateX = Math.round(10 * deltaX);
+
+        const elapsedTime = Date.now() - dragStartTime;
+
+        if (elapsedTime < SWIPE_THRESHOLD) {
+            if (deltaX > 0.5) {
+                newTranslateX = Math.min(scaleTranslateX + startCurrentTranslateX.current, 0);
+            } else if (deltaX < -0.5) {
+                newTranslateX = Math.max(
+                    scaleTranslateX + startCurrentTranslateX.current,
+                    -250 * (9 - 1),
+                );
+            }
+        } else {
+            if (currentTranslateX > 0) {
+                newTranslateX = 0;
+            }
+        }
+
+        setCurrentTranslateX(newTranslateX);
+        startCurrentTranslateX.current = newTranslateX;
+
+        setIsDragging(false);
+        setDeltaX(0);
+    };
+
+    const transformValue = `translateX(${currentTranslateX}px)`;
 
     return (
         <div>
@@ -90,111 +148,10 @@ function About01Page(props) {
                     />
                 </div>
 
-                <div className='t-ctn'>
-                    <div className='swiper-container swiper-container-horizontal swiper-container-free-mode'>
-                        <div
-                            className='swiper-wrapper'
-                            style={{
-                                transform: 'translate3d(0px, 0px, 0px)',
-                                transitionDuration: '0ms',
-                            }}>
-                            <div
-                                className='swiper-slide swiper-slide-active'
-                                style={{ width: '266.667px' }}>
-                                <div className='date-box'>
-                                    <p className='date'>2022.10.27</p>
-                                    <p className='dot'></p>
-                                </div>
-                                <div className='cont'>
-                                    <div className='img-box'>
-                                        <img
-                                            src='https://www.aion.com.cn/Public/Uploads/Picture/images/2022/10/243777281124557537242732953745.jpg'
-                                            alt='content-pic'
-                                        />
-                                    </div>
-                                    <p className='txt'>
-                                        近日，由广汽埃安、广汽乘用车、广汽商贸联合投资，并由广汽埃安控股的因湃电池科技公司正式注册成立...
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className='swiper-slide' style={{ width: '266.667px' }}>
-                                <div className='date-box'>
-                                    <p className='date'>2018.08.27</p>
-                                    <p className='dot'></p>
-                                </div>
-                                <div className='cont'>
-                                    <div className='img-box'>
-                                        <img
-                                            src='https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/871443976371467818577424561548.png'
-                                            alt='content-pic'
-                                        />
-                                    </div>
-                                    <p className='txt'>广汽新能源GE3 530在奥林匹克塔正式上市。</p>
-                                </div>
-                            </div>
-
-                            <div className='swiper-slide' style={{ width: '266.667px' }}>
-                                <div className='date-box'>
-                                    <p className='date'>2018.07.28</p>
-                                    <p className='dot'></p>
-                                </div>
-                                <div className='cont'>
-                                    <div className='img-box'>
-                                        <img
-                                            src='https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/248846354124396315899455645668.png'
-                                            alt='content-pic'
-                                        />
-                                    </div>
-                                    <p className='txt'>
-                                        广汽新能源“因AI而来”AI系统发布会于广州琶醍隆重举行。
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className='swiper-slide' style={{ width: '266.667px' }}>
-                                <div className='date-box'>
-                                    <p className='date'>2018.06.11</p>
-                                    <p className='dot'></p>
-                                </div>
-                                <div className='cont'>
-                                    <div className='img-box'>
-                                        <img
-                                            src='https://www.aion.com.cn/Public/Uploads/Picture/images/2022/08/915686988558292714565822263618.png'
-                                            alt='content-pic'
-                                        />
-                                    </div>
-                                    <p className='txt'>
-                                        广汽新能源GE3 530智能、续航双升级，正式开启火爆预售。
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className='swiper-slide' style={{ width: '266.667px' }}>
-                                <div className='date-box'>
-                                    <p className='date'>2018.04.26</p>
-                                    <p className='dot'></p>
-                                </div>
-                                <div className='cont'>
-                                    <div className='img-box'>
-                                        <img
-                                            src='https://www.aion.com.cn/Public/Uploads/Picture/images/2022/08/895269434344443482164316947115.png'
-                                            alt='content-pic'
-                                        />
-                                    </div>
-                                    <p className='txt'>
-                                        广汽新能源在北京车展正式发布全新品牌口号、品牌IP及用户专属APP。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <span
-                            className='swiper-notification'
-                            aria-live='assertive'
-                            aria-atomic='true'></span>
-                    </div>
-                </div>
+                <Events events={EVENTS} />
             </div>
+
+            <VideoFrame />
         </div>
     );
 }
