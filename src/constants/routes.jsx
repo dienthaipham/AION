@@ -8,6 +8,7 @@ import About05Page from '../pages/About05Page';
 import About04Page from '../pages/About04Page';
 import About03Page from '../pages/About03Page';
 import About01Page from '../pages/About01Page';
+import About02Page from '../pages/About02Page';
 
 export const MAIN_ROUTES = [
     // {
@@ -46,7 +47,7 @@ export const ABOUT_ROUTES = [
     {
         name: '北鼻一家',
         path: '/show/unicorn',
-        element: <WordPressSinglePage />,
+        element: <About02Page />,
     },
     {
         name: '新闻资讯',

@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import './VideoFrame.scss';
 
 function VideoFrame(props) {
+    const { coverImage, video } = props;
+
     const [played, setPlayed] = useState(false);
     const videoRef = useRef(null);
 
@@ -14,16 +16,12 @@ function VideoFrame(props) {
 
     return (
         <div className='video'>
-            <img
-                src='https://www.aion.com.cn/Public/Uploads/Picture/images/2018/09/327956923437499557757648215657.jpg'
-                className='cover-img'
-                alt='Cover'
-            />
+            <img src={coverImage} className='cover-img' alt='Cover' />
             <video
                 ref={videoRef}
                 width='100%'
                 height='100%'
-                src='https://www.aion.com.cn/Public/Video/62ta1b5da9573.mp4'
+                src={video}
                 id='video-box'
                 controls
                 style={{ zIndex: played ? 20 : 9 }}></video>

@@ -1,69 +1,14 @@
 import React, { useState, useRef } from 'react';
 import classNames from 'classnames';
-import './About01Page.scss';
 import Events from './Events';
 import { EVENTS } from '../../constants/about1';
-import VideoFrame from './VideoFrame';
+import VideoFrame from '../../components/VideoFrame';
+import './About01Page.scss';
 
 const sections = ['埃安', '智联产业园', '新能源工厂'];
 
-const SWIPE_THRESHOLD = 200; // Time in milliseconds
-
 function About01Page(props) {
     const [activeIndex, setActiveIndex] = useState(0);
-
-    const [startX, setStartX] = useState(0);
-    const [currentTranslateX, setCurrentTranslateX] = useState(0);
-    const [deltaX, setDeltaX] = useState(0);
-
-    const sliderRef = useRef(null);
-    const startCurrentTranslateX = useRef(0);
-    const [isDragging, setIsDragging] = useState(false);
-    const [dragStartTime, setDragStartTime] = useState(0);
-
-    const handleMouseDown = (event) => {
-        setIsDragging(true);
-        setStartX(event.clientX);
-        setDragStartTime(Date.now());
-    };
-
-    const handleMouseMove = (event) => {
-        if (!isDragging || !sliderRef.current) return;
-
-        const newTranslateX = Math.round(event.clientX - startX) + startCurrentTranslateX.current;
-        setCurrentTranslateX(newTranslateX);
-        setDeltaX(event.clientX - startX);
-    };
-
-    const handleMouseUp = () => {
-        let newTranslateX = currentTranslateX;
-        const scaleTranslateX = Math.round(10 * deltaX);
-
-        const elapsedTime = Date.now() - dragStartTime;
-
-        if (elapsedTime < SWIPE_THRESHOLD) {
-            if (deltaX > 0.5) {
-                newTranslateX = Math.min(scaleTranslateX + startCurrentTranslateX.current, 0);
-            } else if (deltaX < -0.5) {
-                newTranslateX = Math.max(
-                    scaleTranslateX + startCurrentTranslateX.current,
-                    -250 * (9 - 1),
-                );
-            }
-        } else {
-            if (currentTranslateX > 0) {
-                newTranslateX = 0;
-            }
-        }
-
-        setCurrentTranslateX(newTranslateX);
-        startCurrentTranslateX.current = newTranslateX;
-
-        setIsDragging(false);
-        setDeltaX(0);
-    };
-
-    const transformValue = `translateX(${currentTranslateX}px)`;
 
     return (
         <div>
@@ -151,7 +96,10 @@ function About01Page(props) {
                 <Events events={EVENTS} />
             </div>
 
-            <VideoFrame />
+            <VideoFrame
+                coverImage='https://www.aion.com.cn/Public/Uploads/Picture/images/2018/09/327956923437499557757648215657.jpg'
+                video='https://www.aion.com.cn/Public/Video/62ta1b5da9573.mp4'
+            />
         </div>
     );
 }

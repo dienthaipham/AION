@@ -41,7 +41,7 @@ function Events(props) {
             } else if (deltaX < -0.5) {
                 newTranslateX = Math.max(
                     scaleTranslateX + startCurrentTranslateX.current,
-                    -250 * (9 - 1),
+                    -250 * (8 - 1),
                 );
             }
         } else {
