@@ -37,7 +37,7 @@ function About02Page(props) {
                     <p class='hit'>更多内容关注埃安官方微博</p>
                 </div>
 
-                {/* <div class='long-box' id='bottom-table' data-ol-has-click-handler=''>
+                <div class='long-box' id='bottom-table'>
                     <img
                         src='https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/765265418388392512977912669178.jpeg'
                         class='pics'
@@ -48,7 +48,7 @@ function About02Page(props) {
                             class='hand-icon'
                         />
                     </p>
-                </div> */}
+                </div>
             </div>
         </div>
     );

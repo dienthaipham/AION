@@ -47,14 +47,6 @@
             border-radius: 30px;
             background: #fff;
 
-            // li {
-            //     float: left;
-            //     width: 50%;
-            //     color: #00a4b8;
-            //     text-align: center;
-            //     list-style: none;
-            // }
-
             li {
                 float: left;
                 width: 50%;
@@ -87,6 +79,55 @@
                     text-decoration: none;
                 }
             }
+        }
+
+        .hit {
+            margin: 6% 0 10px;
+            text-align: center;
+            color: #888;
+        }
+    }
+
+    .long-box {
+        width: 25.3%;
+        height: 67.5%;
+        background: #cecece;
+        position: absolute;
+        right: 10.2%;
+        top: 20.4%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border-radius: 30px;
+        // padding-bottom: 0;
+        // border-radius: 46px;
+
+        &::-webkit-scrollbar {
+            width: 0.01px; // Width of the scrollbar for WebKit browsers
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent; // Color of the scrollbar thumb for WebKit browsers
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent; // Color of the scrollbar track for WebKit browsers
+        }
+
+        .pics {
+            width: 100%;
+            vertical-align: middle;
+            border: 0;
+        }
+
+        .pop.pop-long {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 0;
+            // margin-bottom: 10px;
         }
     }
 }
