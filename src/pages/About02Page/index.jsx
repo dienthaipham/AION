@@ -1,9 +1,14 @@
-import React from 'react';
-import './About02Page.scss';
+import React, { useState } from 'react';
 import VideoFrame from '../../components/VideoFrame';
 import Profiles from './Profiles';
+import WaseBox from './WaseBox';
+import { BOXES } from '../../constants/about2';
+import './About02Page.scss';
+import GuideModal from './GuideModal';
 
 function About02Page(props) {
+    const [clicked, setClicked] = useState(false);
+
     return (
         <div>
             <VideoFrame
@@ -12,43 +17,153 @@ function About02Page(props) {
             />
             <Profiles />
 
-            <div class='by-jc'>
-                <img src='https://www.aion.com.cn/web/pc/images/by-bg3.png' class='by-bg' />
-                <div class='pic-tit pos'>
-                    <img
-                        src='https://www.aion.com.cn/web/pc/images/by-jc.png?v=1658218806283'
-                        class=''
-                    />
+            <div className='by-jc'>
+                <img src='https://www.aion.com.cn/web/pc/images/by-bg3.png' className='by-bg' />
+                <div className='pic-tit pos'>
+                    <img src='https://www.aion.com.cn/web/pc/images/by-jc.png?v=1658218806283' />
                 </div>
-                <div class='jc-box'>
-                    <div class='p-size'>
+                <div className='jc-box'>
+                    <div className='p-size'>
                         <img src='https://www.aion.com.cn/web/pc/images/jc-pic.jpeg' />
                     </div>
-                    <ul class='btn-list'>
-                        <li class='check-li'>
+                    <ul className='btn-list'>
+                        <li className='check-li'>
                             <a
                                 href='https://s.weibo.com/weibo/%23%E7%8B%AC%E8%A7%92%E5%8C%97%E9%BC%BB%23'
-                                target='_Blank'>
+                                target='_blank'
+                                rel='noopener noreferrer'>
                                 立即前往
                             </a>
                         </li>
                         <li>每周四更新</li>
                     </ul>
-                    <p class='hit'>更多内容关注埃安官方微博</p>
+                    <p className='hit'>更多内容关注埃安官方微博</p>
                 </div>
 
-                <div class='long-box' id='bottom-table'>
+                <div
+                    className={`long-box${!clicked ? ' locked' : ''}`}
+                    onClick={() => setClicked(true)}>
                     <img
                         src='https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/765265418388392512977912669178.jpeg'
-                        class='pics'
+                        className='pics'
                     />
-                    <p class='pop pop-long'>
-                        <img
-                            src='https://www.aion.com.cn/web/pc/images/icon/hand-icon.png'
-                            class='hand-icon'
-                        />
-                    </p>
+                    {!clicked && (
+                        <p className='pop pop-long'>
+                            <img
+                                src='https://www.aion.com.cn/web/pc/images/icon/hand-icon.png'
+                                className='hand-icon'
+                            />
+                        </p>
+                    )}
                 </div>
+            </div>
+
+            <div class='sh-box'>
+                <div class='pic-tit pos'>
+                    <img src='https://www.aion.com.cn/web/pc/images/shzb-titpic.png?v=1658218806283' />
+                </div>
+
+                <div class='cont-box clearfix'>
+                    <div class='left-pb'>
+                        <div class='pb-box'>
+                            <img src='https://www.aion.com.cn/web/pc/images/pb-pic.png' />
+                        </div>
+                        <div class='tba-box'>
+                            <div
+                                class='swiper-container swiper-container-horizontal'
+                                data-ol-has-click-handler=''>
+                                <div class='swiper-wrapper'>
+                                    <div
+                                        class='swiper-slide swiper-slide-duplicate swiper-slide-next'
+                                        data-swiper-slide-index='0'
+                                        // style='width: 263px;'
+                                    >
+                                        <img
+                                            src='/Public/Uploads/Picture/images/2022/09/483579579539694238275478347515.png'
+                                            class='pic'
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class='swiper-pagination swiper-pagination-clickable swiper-pagination-bullets'
+                                    data-ol-has-click-handler=''>
+                                    <span
+                                        class='swiper-pagination-bullet'
+                                        tabindex='0'
+                                        role='button'
+                                        aria-label='Go to slide 1'></span>
+                                    <span
+                                        class='swiper-pagination-bullet'
+                                        tabindex='0'
+                                        role='button'
+                                        aria-label='Go to slide 2'></span>
+                                    <span
+                                        class='swiper-pagination-bullet swiper-pagination-bullet-active'
+                                        tabindex='0'
+                                        role='button'
+                                        aria-label='Go to slide 3'></span>
+                                </div>
+                                <span
+                                    class='swiper-notification'
+                                    aria-live='assertive'
+                                    aria-atomic='true'></span>
+                            </div>
+                        </div>
+                        <a
+                            href='/download.php?files=/Public/file/2018/0929/70142365.rar'
+                            class='dload-btn'>
+                            下载屏保
+                        </a>
+                    </div>
+
+                    <div class='right-zb'>
+                        <div class='zb-tit'>
+                            <img src='https://www.aion.com.cn/web/pc/images/zb-tit.png' />
+                        </div>
+
+                        <ul class='wase-list clearfix'>
+                            {BOXES.map((item) => (
+                                <li>
+                                    <WaseBox image={item.image} title={item.title} />
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+
+                <GuideModal />
+
+                {/* <div
+                    class='guide-mask guide-app'
+                    data-ol-has-click-handler=''
+                    // style='display: none;'
+                    >
+                    <div class='pop clearfix'>
+                        <div class='tit-pic'>
+                            <p>发现更多精致周边尽在</p>
+                            <img src='/web/pc/images/tit-app.png' />
+                        </div>
+                        <div class='guide-code'>
+                            <div class='left'>
+                                <a
+                                    href='/app-download/app.php?dev=ios'
+                                    target='_Blank'
+                                    class='app-store'>
+                                    <img src='/web/pc/images/app-store.png' />
+                                </a>
+                                <a
+                                    href='/app-download/app.php?dev=android'
+                                    target='_Blank'
+                                    class='android'>
+                                    <img src='/web/pc/images/android.png' />
+                                </a>
+                            </div>
+                            <div class='right'>
+                                <img src='/web/pc/images/service-code.png' />
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
             </div>
         </div>
     );

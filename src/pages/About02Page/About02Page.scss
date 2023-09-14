@@ -23,7 +23,6 @@
     }
 
     .pic-tit {
-        // width: 42%;
         margin: 5% auto;
         text-align: center;
     }
@@ -98,8 +97,10 @@
         overflow-y: scroll;
         overflow-x: hidden;
         border-radius: 30px;
-        // padding-bottom: 0;
-        // border-radius: 46px;
+
+        &.locked {
+            overflow-y: hidden;
+        }
 
         &::-webkit-scrollbar {
             width: 0.01px; // Width of the scrollbar for WebKit browsers
@@ -127,7 +128,66 @@
             left: 0;
             top: 0;
             margin: 0;
-            // margin-bottom: 10px;
+
+            .hand-icon {
+                width: 23%;
+                position: absolute;
+                right: 2px;
+                top: 43.5%;
+            }
+        }
+    }
+}
+
+.sh-box {
+    width: 100%;
+    margin-bottom: 4%;
+    position: relative;
+
+    .pic-tit {
+        width: 42%;
+        margin: 5% auto;
+        text-align: center;
+        img {
+            width: 100%;
+            margin: auto;
+        }
+    }
+
+    .cont-box {
+        width: 90%;
+        margin: 0 auto;
+
+        .left-pb {
+            width: 40%;
+            float: left;
+            .pb-box {
+                margin: 0 auto 7%;
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .right-zb {
+            width: 60%;
+            float: left;
+            .zb-tit img {
+                display: block;
+                margin: 0 auto;
+            }
+            .wase-list {
+                width: 90%;
+                margin: 5% auto 0 8%;
+                li {
+                    float: left;
+                    width: 30%;
+                    margin-right: 15px;
+                    margin-bottom: 50px;
+                    list-style: none;
+                }
+            }
         }
     }
 }
