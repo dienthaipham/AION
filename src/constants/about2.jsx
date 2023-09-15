@@ -24,3 +24,9 @@ export const BOXES = [
         title: '独角北鼻公仔',
     },
 ];
+
+export const OPTION_DATA = [
+    'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/483579579539694238275478347515.png',
+    'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/371577639892845752518473526968.png',
+    'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/916928128849718734682859282561.png',
+];

@@ -76,9 +76,7 @@ const InfiniteDragSlider = ({ images }) => {
     const handleClickSlideButton = (direction) => {
         setHovering(false);
         if (direction === 'prev')
-            setActiveImageIndex(
-                (prev) => (prev - 1 + images.length + 2) % (images.length + 2)
-            );
+            setActiveImageIndex((prev) => (prev - 1 + images.length + 2) % (images.length + 2));
         else if (direction === 'next')
             setActiveImageIndex((prev) => (prev + 1) % (images.length + 2));
     };
@@ -106,26 +104,22 @@ const InfiniteDragSlider = ({ images }) => {
 
     return (
         <div
-            className="infinite-slider"
+            className='infinite-slider'
             ref={sliderRef}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
-        >
+            onMouseLeave={handleMouseUp}>
             <div
                 className={`image-wrapper${
-                    isDragging || hovering || autoSlideFlag
-                        ? ' quick-switch'
-                        : ''
+                    isDragging || hovering || autoSlideFlag ? ' quick-switch' : ''
                 }`}
-                style={{ transform: transformValue }}
-            >
+                style={{ transform: transformValue }}>
                 <img
                     key={0}
                     src={images[images.length - 1]}
                     alt={`Slide ${0}`}
-                    className="slider-image"
+                    className='slider-image'
                     onDragStart={(e) => e.preventDefault()}
                 />
                 {images.map((image, index) => (
@@ -133,7 +127,7 @@ const InfiniteDragSlider = ({ images }) => {
                         key={index + 1}
                         src={image}
                         alt={`Slide ${index + 1}`}
-                        className="slider-image"
+                        className='slider-image'
                         onDragStart={(e) => e.preventDefault()}
                     />
                 ))}
@@ -141,11 +135,11 @@ const InfiniteDragSlider = ({ images }) => {
                     key={images.length + 1}
                     src={images[0]}
                     alt={`Slide ${images.length + 1}`}
-                    className="slider-image"
+                    className='slider-image'
                     onDragStart={(e) => e.preventDefault()}
                 />
             </div>
-            <div className="slider-pagination">
+            <div className='slider-pagination'>
                 {images.map((_, index) => {
                     const newActiveImageIndex =
                         (activeImageIndex - 1 + images.length) % images.length;
@@ -156,23 +150,20 @@ const InfiniteDragSlider = ({ images }) => {
                             className={`slider-pagination-option${
                                 newActiveImageIndex === index ? ' active' : ''
                             }`}
-                            onClick={() => setActiveImageIndex(index + 1)}
-                        ></span>
+                            onClick={() => setActiveImageIndex(index + 1)}></span>
                     );
                 })}
             </div>
             <div
-                className="slider-button prev"
+                className='slider-button prev'
                 onMouseEnter={handleEnterSlideButton}
                 onMouseLeave={() => setHovering(false)}
-                onClick={() => handleClickSlideButton('prev')}
-            ></div>
+                onClick={() => handleClickSlideButton('prev')}></div>
             <div
-                className="slider-button next"
+                className='slider-button next'
                 onMouseEnter={handleEnterSlideButton}
                 onMouseLeave={() => setHovering(false)}
-                onClick={() => handleClickSlideButton('next')}
-            ></div>
+                onClick={() => handleClickSlideButton('next')}></div>
         </div>
     );
 };

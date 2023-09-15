@@ -6,4 +6,61 @@
     left: 0;
     bottom: 0;
     z-index: 999;
+
+    .pop {
+        background: #fff;
+        padding: 2% 4%;
+        border-radius: 15px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        .tit-pic {
+            text-align: center;
+            color: #666;
+            font-size: 27px;
+            p {
+                padding: 5% 0 3% 0;
+                margin: 0 0 10px;
+            }
+
+            img {
+                width: 72%;
+                max-width: 494px;
+            }
+        }
+
+        .guide-code {
+            width: 90%;
+            margin: 4% auto;
+            border-top: 1px solid #f6f6f6;
+            padding: 5% 0 2% 0;
+            overflow: hidden;
+            .left {
+                width: auto;
+                float: left;
+                padding-bottom: 2%;
+                .app-store,
+                .android {
+                    cursor: pointer;
+                    display: block;
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-bottom: 5%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .right {
+                width: 50%;
+                float: left;
+                text-align: center;
+                img {
+                    width: 62%;
+                }
+            }
+        }
+    }
 }

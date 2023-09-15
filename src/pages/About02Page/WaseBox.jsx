@@ -2,7 +2,7 @@ import React from 'react';
 import './WaseBox.scss';
 
 function WaseBox(props) {
-    const { image, title } = props;
+    const { image, title, handleClick } = props;
 
     return (
         <div className='box-wrapper'>
@@ -15,7 +15,7 @@ function WaseBox(props) {
                     {title}
                 </p>
                 <div class='clearfix hit'>
-                    <a class='buy-btn' data-ol-has-click-handler=''>
+                    <a class='buy-btn' onClick={handleClick}>
                         商城购买
                     </a>
                 </div>

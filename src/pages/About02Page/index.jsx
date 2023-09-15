@@ -5,9 +5,12 @@ import WaseBox from './WaseBox';
 import { BOXES } from '../../constants/about2';
 import './About02Page.scss';
 import GuideModal from './GuideModal';
+import { InfiniteDragSlider } from '../../components';
+import { OPTION_DATA } from '../../constants/about2';
 
 function About02Page(props) {
     const [clicked, setClicked] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
 
     return (
         <div>
@@ -69,45 +72,7 @@ function About02Page(props) {
                             <img src='https://www.aion.com.cn/web/pc/images/pb-pic.png' />
                         </div>
                         <div class='tba-box'>
-                            <div
-                                class='swiper-container swiper-container-horizontal'
-                                data-ol-has-click-handler=''>
-                                <div class='swiper-wrapper'>
-                                    <div
-                                        class='swiper-slide swiper-slide-duplicate swiper-slide-next'
-                                        data-swiper-slide-index='0'
-                                        // style='width: 263px;'
-                                    >
-                                        <img
-                                            src='/Public/Uploads/Picture/images/2022/09/483579579539694238275478347515.png'
-                                            class='pic'
-                                        />
-                                    </div>
-                                </div>
-                                <div
-                                    class='swiper-pagination swiper-pagination-clickable swiper-pagination-bullets'
-                                    data-ol-has-click-handler=''>
-                                    <span
-                                        class='swiper-pagination-bullet'
-                                        tabindex='0'
-                                        role='button'
-                                        aria-label='Go to slide 1'></span>
-                                    <span
-                                        class='swiper-pagination-bullet'
-                                        tabindex='0'
-                                        role='button'
-                                        aria-label='Go to slide 2'></span>
-                                    <span
-                                        class='swiper-pagination-bullet swiper-pagination-bullet-active'
-                                        tabindex='0'
-                                        role='button'
-                                        aria-label='Go to slide 3'></span>
-                                </div>
-                                <span
-                                    class='swiper-notification'
-                                    aria-live='assertive'
-                                    aria-atomic='true'></span>
-                            </div>
+                            <InfiniteDragSlider images={OPTION_DATA} />
                         </div>
                         <a
                             href='/download.php?files=/Public/file/2018/0929/70142365.rar'
@@ -124,46 +89,18 @@ function About02Page(props) {
                         <ul class='wase-list clearfix'>
                             {BOXES.map((item) => (
                                 <li>
-                                    <WaseBox image={item.image} title={item.title} />
+                                    <WaseBox
+                                        image={item.image}
+                                        title={item.title}
+                                        handleClick={() => setOpenModal(true)}
+                                    />
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
 
-                <GuideModal />
-
-                {/* <div
-                    class='guide-mask guide-app'
-                    data-ol-has-click-handler=''
-                    // style='display: none;'
-                    >
-                    <div class='pop clearfix'>
-                        <div class='tit-pic'>
-                            <p>发现更多精致周边尽在</p>
-                            <img src='/web/pc/images/tit-app.png' />
-                        </div>
-                        <div class='guide-code'>
-                            <div class='left'>
-                                <a
-                                    href='/app-download/app.php?dev=ios'
-                                    target='_Blank'
-                                    class='app-store'>
-                                    <img src='/web/pc/images/app-store.png' />
-                                </a>
-                                <a
-                                    href='/app-download/app.php?dev=android'
-                                    target='_Blank'
-                                    class='android'>
-                                    <img src='/web/pc/images/android.png' />
-                                </a>
-                            </div>
-                            <div class='right'>
-                                <img src='/web/pc/images/service-code.png' />
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+                <GuideModal open={openModal} onChangeOpen={(v) => setOpenModal(v)} />
             </div>
         </div>
     );
