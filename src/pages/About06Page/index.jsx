@@ -132,6 +132,37 @@ function About06Page(props) {
                     </table>
                 </div>
 
+                <div className='shareholder-wrap--mobile'>
+                    <table style={{ marginBottom: '14px' }}>
+                        <thead>
+                            <tr>
+                                <th>股东名称</th>
+                                <th>股东类型</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>广汽埃安新能源汽车股份有限公司</td>
+                                <td>法人股东</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>证照/证件类型</th>
+                                <th>证照/证件号码</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>企业法人营业执照(公司)</td>
+                                <td>91440101MA59R41L0L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <h3>主要人员信息</h3>
                 <div className='personal-information'>
                     <div>

@@ -70,7 +70,7 @@
             letter-spacing: 1.47px;
             margin-bottom: 2.2rem;
             margin-top: 0;
-            padding-top: 13rem;
+            padding-top: 9rem;
         }
 
         h4 {
@@ -140,6 +140,25 @@
 
                 &.long-text {
                     display: block;
+                }
+            }
+        }
+
+        .shareholder-wrap {
+            &--mobile {
+                display: none;
+            }
+
+            @media screen and (max-width: $breakpoint-small) {
+                display: none;
+                &--mobile {
+                    display: block;
+                    table {
+                        td {
+                            width: 50%;
+                            padding: 0 22px;
+                        }
+                    }
                 }
             }
         }
