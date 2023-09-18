@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 .aion-common-footer {
     padding: 0 40px;
     background-color: #fff;
@@ -5,71 +7,156 @@
     justify-content: space-between;
     align-items: center;
     border-top: 0.5px solid #dcdde0;
-    clear: left; //?????????????????/
+    clear: left;
+
+    @media screen and (max-width: $breakpoint-small) {
+        display: none;
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 37px 0;
+        font-size: 16px;
+        color: #303745;
+        letter-spacing: 0;
+        line-height: 1.33;
+
+        .service-left-phone {
+            font-family: PingFangSC-Medium;
+            margin-bottom: 14px;
+            font-weight: normal;
+
+            i {
+                margin: 0 30px;
+            }
+
+            a {
+                color: #303745;
+                text-decoration: underline;
+            }
+        }
+
+        .aion-common-copyright {
+            font-family: PingFangSC-Light;
+            font-weight: 300;
+            font-size: 14px;
+            color: #818b94;
+            letter-spacing: 0;
+            line-height: 24px;
+
+            a {
+                color: #818b94;
+                text-decoration: none;
+
+                &:last-child {
+                    display: inline-block;
+                    height: 16px;
+                    line-height: 16px;
+                    margin-left: 20px;
+                    img {
+                        margin-top: -2px;
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-right {
+        display: flex;
+        position: relative;
+
+        .flex-box-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 30px;
+            position: relative;
+
+            a img {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+
+            span {
+                font-family: PingFangSC-Light;
+                font-weight: 300;
+                font-size: 12px;
+                color: #818b94;
+                letter-spacing: 0;
+                text-align: center;
+            }
+        }
+    }
 }
 
-.aion-common-footer .footer-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 37px 0;
-    font-size: 16px;
-    color: #303745;
-    letter-spacing: 0;
-    line-height: 1.33;
-}
+.aion-common-footer-mobile {
+    display: none;
 
-.aion-common-footer .footer-left .service-left-phone {
-    font-family: PingFangSC-Medium;
-    margin-bottom: 14px;
-    font-weight: normal;
-}
+    @media screen and (max-width: $breakpoint-small) {
+        display: block;
+        padding: 7px 26px 23px;
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 1.89rem;
+        color: #303745;
+        line-height: 2;
+        border-top: 1px solid #eaeaea;
 
-.aion-common-footer .footer-left .service-left-phone i {
-    margin: 0 30px;
-}
+        .service-phone {
+            margin: 14px 0 22px;
+            a {
+                text-decoration: underline;
+                color: #303745;
+            }
+            i {
+                margin: 0 22px;
+            }
+        }
 
-.aion-common-footer .footer-left .service-left-phone a {
-    color: #303745;
-    text-decoration: underline;
-}
+        .service-icon {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 46px 26px;
 
-.aion-common-footer .footer-left .aion-common-copyright,
-.aion-common-footer .footer-left .aion-common-copyright a {
-    font-family: PingFangSC-Light;
-    font-weight: 300;
-    font-size: 14px;
-    color: #818b94;
-    letter-spacing: 0;
-    line-height: 24px;
-}
+            .flex-box-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                a img {
+                    width: 44px;
+                    height: 44px;
+                }
+                span {
+                    font-family: PingFangSC-Light;
+                    font-weight: 300;
+                    color: #818b94;
+                    letter-spacing: 0;
+                    text-align: center;
+                    transform: scale(0.833);
+                }
+            }
+        }
 
-.aion-common-footer .footer-right {
-    display: flex;
-    position: relative;
-}
-
-.aion-common-footer .flex-box-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 30px;
-    position: relative;
-}
-
-.aion-common-footer .flex-box-column > a img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.aion-common-footer .flex-box-column > span {
-    font-family: PingFangSC-Light;
-    font-weight: 300;
-    font-size: 12px;
-    color: #818b94;
-    letter-spacing: 0;
-    text-align: center;
+        .aion-common-copyright {
+            color: #818b94;
+            letter-spacing: 0;
+            text-align: center;
+            a {
+                color: #818b94;
+                letter-spacing: 0;
+                text-align: center;
+                text-decoration: none;
+            }
+        }
+    }
 }

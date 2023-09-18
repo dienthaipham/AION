@@ -72,7 +72,7 @@ function About02Page(props) {
                             <img src='https://www.aion.com.cn/web/pc/images/pb-pic.png' />
                         </div>
                         <div class='tba-box'>
-                            <InfiniteDragSlider images={OPTION_DATA} />
+                            <InfiniteDragSlider images={OPTION_DATA} switchOutside={true} />
                         </div>
                         <a
                             href='/download.php?files=/Public/file/2018/0929/70142365.rar'

@@ -1,34 +1,46 @@
 import React from 'react';
 import './About06Page.scss';
+import useIsMobile from '../../hooks/useIsMobile';
 
 function About06Page(props) {
+    const isMobile = useIsMobile();
+
     return (
         <div className='information-announcement'>
-            <div className='information-announcement__banner'>
-                <img
-                    src='https://www.aion.com.cn/web/pc/images/information-announcement/banner.png'
-                    alt=''
-                />
-                <div className='banner-content'>
-                    <h2>埃安汽车销售服务有限公司</h2>
-                    <div className='info-list'>
-                        <span className='info-list__info-l'>统一社会信用代码</span>
-                        <span className='info-list__info-r'>91440101MA5D3RX40T</span>
-                    </div>
-                    <div className='info-list'>
-                        <span className='info-list__info-l'>法定代表人</span>
-                        <span className='info-list__info-r'>肖勇</span>
-                    </div>
-                    <div className='info-list'>
-                        <span className='info-list__info-l'>登记机关</span>
-                        <span className='info-list__info-r'>广州市番禺区市场监督管理局</span>
-                    </div>
-                    <div className='info-list'>
-                        <span className='info-list__info-l'>成立日期</span>
-                        <span className='info-list__info-r'>2020年01月03日</span>
+            {isMobile ? (
+                <div className='information-announcement__mobile-banner'>
+                    <img
+                        src='https://www.aion.com.cn/web/m/images/information-announcement/banner.png?version=v1693474710'
+                        alt=''
+                    />
+                </div>
+            ) : (
+                <div className='information-announcement__banner'>
+                    <img
+                        src='https://www.aion.com.cn/web/pc/images/information-announcement/banner.png'
+                        alt=''
+                    />
+                    <div className='banner-content'>
+                        <h2>埃安汽车销售服务有限公司</h2>
+                        <div className='info-list'>
+                            <span className='info-list__info-l'>统一社会信用代码</span>
+                            <span className='info-list__info-r'>91440101MA5D3RX40T</span>
+                        </div>
+                        <div className='info-list'>
+                            <span className='info-list__info-l'>法定代表人</span>
+                            <span className='info-list__info-r'>肖勇</span>
+                        </div>
+                        <div className='info-list'>
+                            <span className='info-list__info-l'>登记机关</span>
+                            <span className='info-list__info-r'>广州市番禺区市场监督管理局</span>
+                        </div>
+                        <div className='info-list'>
+                            <span className='info-list__info-l'>成立日期</span>
+                            <span className='info-list__info-r'>2020年01月03日</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
 
             <div className='information-announcement__main'>
                 <h3>营业执照信息</h3>
@@ -90,7 +102,7 @@ function About06Page(props) {
                     </div>
                 </div>
 
-                <div className='info-list'>
+                <div className='info-list long-text'>
                     <span className='info-list__info-l'>经 营 范 围</span>
                     <br />
                     <span className='info-list__info-r'>

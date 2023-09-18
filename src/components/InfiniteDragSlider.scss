@@ -3,6 +3,23 @@
     overflow: hidden;
     width: 100%;
 
+    &.switch-outside {
+        overflow-x: clip;
+        overflow-y: visible;
+
+        .image-wrapper {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .slider-pagination {
+            bottom: -32px;
+        }
+
+        .slider-button {
+            display: none;
+        }
+    }
+
     .image-wrapper {
         display: flex;
         transition: transform 0.5s ease-in-out;
@@ -52,85 +69,14 @@
 
         &.prev {
             left: 40px;
-            background: url('https://www.aion.com.cn/web/pc/images/icon/l-arrow-icon.png')
-                no-repeat !important;
+            background: url('https://www.aion.com.cn/web/pc/images/icon/l-arrow-icon.png') no-repeat !important;
             background-size: 100% 100% !important;
         }
 
         &.next {
             right: 40px;
-            background: url('https://www.aion.com.cn/web/pc/images/icon/r-arrow-icon.png')
-                no-repeat !important;
+            background: url('https://www.aion.com.cn/web/pc/images/icon/r-arrow-icon.png') no-repeat !important;
             background-size: 100% 100% !important;
         }
     }
 }
-
-// .infinite-slider-container {
-//     position: relative;
-//     overflow: hidden;
-//     width: 100%;
-// }
-
-// .infinite-image-wrapper {
-//     display: flex;
-//     transition: transform 0.5s ease-in-out;
-// }
-
-// .infinite-image-wrapper.quick-switch {
-//     transition: transform 0s ease-in-out;
-// }
-
-// .infinite-slide-image {
-//     flex: 0 0 100%;
-//     height: auto;
-//     width: 100%;
-// }
-
-// .infinite-slider-pagination {
-//     bottom: 10px;
-//     left: 0;
-//     width: 100%;
-//     position: absolute;
-//     text-align: center;
-//     z-index: 10;
-// }
-
-// .infinite-slider-pagination-option {
-//     cursor: pointer;
-//     margin: 0 4px;
-//     width: 40px;
-//     height: 4px;
-//     display: inline-block;
-//     background: #000;
-//     opacity: 0.2;
-// }
-
-// .infinite-slider-pagination-option.active {
-//     opacity: 1;
-//     background: #00a5b8;
-// }
-
-// .infinite-slide-button {
-//     position: absolute;
-//     z-index: 111;
-//     top: 50%;
-//     margin-top: -22px;
-//     cursor: pointer;
-//     width: 43px !important;
-//     height: 78px !important;
-// }
-
-// .infinite-slide-button.prev {
-//     left: 40px;
-//     background: url('https://www.aion.com.cn/web/pc/images/icon/l-arrow-icon.png')
-//         no-repeat !important;
-//     background-size: 100% 100% !important;
-// }
-
-// .infinite-slide-button.next {
-//     right: 40px;
-//     background: url('https://www.aion.com.cn/web/pc/images/icon/r-arrow-icon.png')
-//         no-repeat !important;
-//     background-size: 100% 100% !important;
-// }

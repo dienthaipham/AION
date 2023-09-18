@@ -3,7 +3,7 @@ import './InfiniteDragSlider.scss';
 
 const SWIPE_THRESHOLD = 200; // Time in milliseconds
 
-const InfiniteDragSlider = ({ images }) => {
+const InfiniteDragSlider = ({ images, switchOutside }) => {
     const sliderRef = useRef(null);
 
     const [activeImageIndex, setActiveImageIndex] = useState(1);
@@ -104,7 +104,7 @@ const InfiniteDragSlider = ({ images }) => {
 
     return (
         <div
-            className='infinite-slider'
+            className={`infinite-slider${switchOutside ? ' switch-outside' : ''}`}
             ref={sliderRef}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}

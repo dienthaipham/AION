@@ -26,13 +26,9 @@
     }
 
     .slider-pagination {
-        width: 70%;
+        width: 60%;
         padding: 0 34px 40px;
-        background: linear-gradient(
-            180deg,
-            #ebf1f8 0%,
-            rgba(235, 243, 255, 0.7) 100%
-        );
+        background: linear-gradient(180deg, #ebf1f8 0%, rgba(235, 243, 255, 0.7) 100%);
         border-radius: 5px;
         opacity: 0.9;
         flex-wrap: nowrap;
