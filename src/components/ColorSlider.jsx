@@ -29,13 +29,13 @@ const ColorSlider = ({ optionsData }) => {
         setIsDragging(false);
     };
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setActiveImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    //     }, 50000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 50000);
 
-    //     return () => clearInterval(interval);
-    // }, [images.length]);
+        return () => clearInterval(interval);
+    }, [images.length]);
 
     return (
         <div

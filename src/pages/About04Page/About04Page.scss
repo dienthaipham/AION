@@ -1,7 +1,23 @@
+@import '../../styles/variables';
+
 .rlzy-box {
     width: 74%;
     margin: 0 auto;
     margin-bottom: 64px;
+
+    @media screen and (max-width: $breakpoint-small) {
+        // width: 100%;
+        width: auto;
+        margin: 0 18px;
+    }
+
+    .join-title {
+        // width: 90%;
+        margin: 0 auto;
+        padding: 56px 0 22px 0;
+        font-size: 30px;
+        color: #14223E;
+    }
 
     &__tit-img {
         text-align: center;
@@ -19,6 +35,10 @@
         line-height: 30px;
         font-size: 17px;
         margin: 0 0 10px;
+        @media screen and (max-width: $breakpoint-small) {
+            font-size: 1.92rem;
+            line-height: 3.82rem;
+        }
     }
 
     &__zplc-box {
@@ -44,8 +64,14 @@
                 border: 1px solid #0daabc;
                 padding: 0.7%;
                 border-radius: 100%;
-                -webkit-border-radius: 100%;
                 box-sizing: border-box;
+
+                @media screen and (max-width: $breakpoint-small) {
+                    width: 43px;
+                    height: 43px;
+                    font-size: 1.92rem;
+                    top: -20px !important;
+                }
 
                 &.on {
                     width: 85px;
@@ -55,6 +81,13 @@
                     font-size: 21px;
                     padding: 1%;
                     top: -40px !important;
+
+                    @media screen and (max-width: $breakpoint-small) {
+                        width: 48px;
+                        height: 48px;
+                        top: -30px !important;
+                        font-size: 1.78rem;
+                    }
                 }
 
                 &:nth-child(1) {
