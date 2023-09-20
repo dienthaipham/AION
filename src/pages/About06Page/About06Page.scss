@@ -151,6 +151,7 @@
 
             @media screen and (max-width: $breakpoint-small) {
                 display: none;
+
                 &--mobile {
                     display: block;
                     table {

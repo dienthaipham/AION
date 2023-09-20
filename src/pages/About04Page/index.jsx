@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Section } from '../../components';
-import TestImg from '../../assets/test.png';
-import './About04Page.scss';
 import useIsMobile from '../../hooks/useIsMobile';
+import './About04Page.scss';
 
 function About04Page(props) {
     const steps = ['企业文化', '招聘策略', '薪酬福利', '人才培训', '职业发展'];
@@ -11,16 +10,23 @@ function About04Page(props) {
 
     return (
         <div>
-            <Section src={isMobile ? 'https://www.aion.com.cn/web/m/images/aion-more/recruit-banner.png' : 'https://www.aion.com.cn/web/pc/images/zp-banner.png?v=1658219070649'} alt='' />
+            <Section
+                src={
+                    isMobile
+                        ? 'https://www.aion.com.cn/web/m/images/aion-more/recruit-banner.png'
+                        : 'https://www.aion.com.cn/web/pc/images/zp-banner.png?v=1658219070649'
+                }
+                alt=''
+            />
 
             <div className='rlzy-box'>
-                {
-                    isMobile ? <div class="join-title">人力资源管理</div> : 
+                {isMobile ? (
+                    <div class='join-title'>人力资源管理</div>
+                ) : (
                     <div className='rlzy-box__tit-img'>
                         <img src='https://www.aion.com.cn/web/pc/images/rlzy-tit.png?v=1658219070649' />
                     </div>
-                }
-             
+                )}
 
                 <p className='rlzy-box__dis'>
                     人才是第一资源，创新是第一动力。公司坚持“创新驱动，人才先行”，着力打造助推埃安事业快速发展的强劲“人才驱动力”，打造一支在行业内领先的创新型人才队伍。

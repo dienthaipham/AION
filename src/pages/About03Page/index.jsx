@@ -3,6 +3,7 @@ import { Section } from '../../components';
 import './About03Page.scss';
 import NewItem from './NewItem';
 import Pagination from './Pagination';
+import useIsMobile from '../../hooks/useIsMobile';
 
 const DATA = [
     {
@@ -22,10 +23,16 @@ const DATA = [
 ];
 
 function About03Page(props) {
+    const isMobile = useIsMobile();
+
     return (
         <div>
             <Section
-                src='https://www.aion.com.cn/web/pc/images/new-banner.png?v=1658219070649'
+                src={
+                    isMobile
+                        ? 'https://www.aion.com.cn/web/m/images/aion-more/news-banner.png'
+                        : 'https://www.aion.com.cn/web/pc/images/new-banner.png?v=1658219070649'
+                }
                 alt=''
             />
             <ul class='new-list'>
@@ -34,40 +41,6 @@ function About03Page(props) {
                 ))}
             </ul>
 
-            {/* <div class='page-box'>
-                <ul class='pagination' id='page-box'>
-                    <li data-ol-has-click-handler=''>
-                        <a aria-label='Previous'>«</a>
-                    </li>{' '}
-                    <li data-ol-has-click-handler=''>
-                        <a>上一页</a>
-                    </li>
-                    <li class='active' page='1' data-ol-has-click-handler=''>
-                        <a>1</a>
-                    </li>
-                    <li page='2' data-ol-has-click-handler=''>
-                        <a>2</a>
-                    </li>
-                    <li page='3' data-ol-has-click-handler=''>
-                        <a>3</a>
-                    </li>
-                    <li page='4' data-ol-has-click-handler=''>
-                        <a>4</a>
-                    </li>
-                    <li data-ol-has-click-handler=''>
-                        <a>...</a>
-                    </li>
-                    <li page='31' data-ol-has-click-handler=''>
-                        <a>31</a>
-                    </li>
-                    <li data-ol-has-click-handler=''>
-                        <a>下一页</a>
-                    </li>{' '}
-                    <li data-ol-has-click-handler=''>
-                        <a aria-label='Next'>»</a>
-                    </li>
-                </ul>
-            </div> */}
             <Pagination />
         </div>
     );
