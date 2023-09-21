@@ -140,6 +140,10 @@
         }
     }
 
+    .ttil {
+        display: none;
+    }
+
     .long-box-mobile {
         display: none;
     }
@@ -166,7 +170,7 @@
         }
 
         .pic-tit {
-            margin: 5% auto;
+            padding-top: 18px;
             text-align: center;
         }
 
@@ -194,6 +198,15 @@
             background: url('https://www.aion.com.cn/web/m/images/phone.png') no-repeat;
             background-size: 100% 100%;
             position: relative;
+        }
+
+        .ttil {
+            display: block;
+            text-align: center;
+            color: #888;
+            font-size: 18px;
+            margin: 0;
+            padding-bottom: 18px;
         }
     }
 }
@@ -268,6 +281,18 @@
                     list-style: none;
                 }
             }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        .pic-tit {
+            width: auto;
+            // margin: 5% auto;
+            // text-align: center;
+            // img {
+            //     width: 100%;
+            //     margin: auto;
+            // }
         }
     }
 }

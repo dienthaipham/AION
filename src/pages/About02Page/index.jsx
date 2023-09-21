@@ -7,8 +7,10 @@ import './About02Page.scss';
 import GuideModal from './GuideModal';
 import { InfiniteDragSlider } from '../../components';
 import { OPTION_DATA } from '../../constants/about2';
+import useIsMobile from '../../hooks/useIsMobile';
 
 function About02Page(props) {
+    const isMobile = useIsMobile();
     const [clicked, setClicked] = useState(false);
     const [openModal, setOpenModal] = useState(false);
 
@@ -73,6 +75,8 @@ function About02Page(props) {
                     </div>
                 </div>
 
+                <p class='ttil'>点击浏览</p>
+
                 {/* <div
                     className={`long-box${!clicked ? ' locked' : ''}`}
                     onClick={() => setClicked(true)}>
@@ -93,8 +97,16 @@ function About02Page(props) {
 
             <div class='sh-box'>
                 <div class='pic-tit pos'>
-                    <img src='https://www.aion.com.cn/web/pc/images/shzb-titpic.png?v=1658218806283' />
+                    <img
+                        src={
+                            isMobile
+                                ? 'https://www.aion.com.cn/web/m/images/shzb-tit.png'
+                                : 'https://www.aion.com.cn/web/pc/images/shzb-titpic.png?v=1658218806283'
+                        }
+                    />
                 </div>
+
+                {/* //???????????? */}
 
                 <div class='cont-box clearfix'>
                     <div class='left-pb'>
