@@ -26,7 +26,7 @@ function About03Page(props) {
     const isMobile = useIsMobile();
 
     return (
-        <div>
+        <div className='about-03'>
             <Section
                 src={
                     isMobile
@@ -41,7 +41,7 @@ function About03Page(props) {
                 ))}
             </ul>
 
-            <Pagination />
+            {isMobile ? <p class='more-btn'>更多新闻</p> : <Pagination />}
         </div>
     );
 }

@@ -1,3 +1,5 @@
+@import '../../styles/_variables';
+
 .new-item {
     border: 1px solid #eaeaea;
     position: relative;
@@ -79,6 +81,28 @@
                     no-repeat left center;
                 background-size: 20px auto;
                 text-indent: 1.8em;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        overflow: hidden;
+        margin-bottom: 16px;
+
+        &__left {
+            width: auto;
+
+            span img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__right {
+            width: auto;
+
+            .num-box {
+                text-align: left;
             }
         }
     }

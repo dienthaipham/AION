@@ -1,21 +1,31 @@
 import React, { useState } from 'react';
 import './Profiles.scss';
+import useIsMobile from '../../hooks/useIsMobile';
 
 function Profiles(props) {
+    const isMobile = useIsMobile();
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
         <div className='dis'>
             <div className='pic-tit'>
                 <img
-                    src='https://www.aion.com.cn/web/pc/images/djyi-pic1.png?v=1658218806283'
+                    src={
+                        isMobile
+                            ? 'https://www.aion.com.cn/web/m/images/djyj-tit.png'
+                            : 'https://www.aion.com.cn/web/pc/images/djyi-pic1.png?v=1658218806283'
+                    }
                     alt='Profile'
                 />
             </div>
 
             <div className='family-js'>
                 <img
-                    src='https://www.aion.com.cn/web/pc/images/by-bg.png'
+                    src={
+                        isMobile
+                            ? 'https://www.aion.com.cn/web/m/images/babyyj-bg.png'
+                            : 'https://www.aion.com.cn/web/pc/images/by-bg.png'
+                    }
                     className='f-bg'
                     alt='Background'
                 />
@@ -25,19 +35,16 @@ function Profiles(props) {
                             <img
                                 src='https://www.aion.com.cn/web/pc/images/djbb-pic.png?version=v1693474710'
                                 className='dj-img0'
-                                // style={{ width: '27%', left: '63%', top: '17%' }}
                                 alt='Image 0'
                             />
                             <img
                                 src='https://www.aion.com.cn/web/pc/images/djmm-pic.png'
                                 className='dj-img1'
-                                // style={{ width: '27%', left: '10%', top: '19%' }}
                                 alt='Image 1'
                             />
                             <img
                                 src='https://www.aion.com.cn/web/pc/images/djbaby-pic.png'
                                 className='dj-img2'
-                                // style={{ width: '45%', left: '31%', top: '30%' }}
                                 alt='Image 2'
                             />
                         </div>

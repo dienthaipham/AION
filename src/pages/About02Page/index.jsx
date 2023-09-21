@@ -25,6 +25,7 @@ function About02Page(props) {
                 <div className='pic-tit pos'>
                     <img src='https://www.aion.com.cn/web/pc/images/by-jc.png?v=1658218806283' />
                 </div>
+
                 <div className='jc-box'>
                     <div className='p-size'>
                         <img src='https://www.aion.com.cn/web/pc/images/jc-pic.jpeg' />
@@ -59,6 +60,35 @@ function About02Page(props) {
                         </p>
                     )}
                 </div>
+
+                <div class='long-box-mobile'>
+                    <div class='long-pic'>
+                        <div class='img-box'></div>
+                        <div class='pop'>
+                            <img src='/web/m/images/icon/hand-icon.png' class='hand-icon' />
+                        </div>
+                    </div>
+                    <div class='gt-img'>
+                        <img src='/Public/Uploads/Picture/images/2022/09/765265418388392512977912669178.jpeg' />
+                    </div>
+                </div>
+
+                {/* <div
+                    className={`long-box${!clicked ? ' locked' : ''}`}
+                    onClick={() => setClicked(true)}>
+                    <img
+                        src='https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/765265418388392512977912669178.jpeg'
+                        className='pics'
+                    />
+                    {!clicked && (
+                        <p className='pop pop-long'>
+                            <img
+                                src='https://www.aion.com.cn/web/pc/images/icon/hand-icon.png'
+                                className='hand-icon'
+                            />
+                        </p>
+                    )}
+                </div> */}
             </div>
 
             <div class='sh-box'>

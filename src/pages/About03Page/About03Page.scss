@@ -1,6 +1,27 @@
-.new-list {
-    width: 80%;
-    margin: 4% auto;
-    list-style: none;
-    padding: 0;
+@import './../../styles/_variables';
+
+.about-03 {
+    .new-list {
+        width: 80%;
+        margin: 4% auto;
+        list-style: none;
+        padding: 0;
+
+        @media screen and (max-width: $breakpoint-small) {
+            width: 90%;
+            margin: 16px auto;
+        }
+    }
+
+    .more-btn {
+        margin: 32px auto;
+        width: 146px;
+        text-align: center;
+        color: #fff;
+        height: 36px;
+        line-height: 38px;
+        background: #00a5b4;
+        border-radius: 26px;
+        font-size: 16px;
+    }
 }
