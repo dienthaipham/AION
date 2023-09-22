@@ -112,6 +112,12 @@ function About01Page(props) {
                 <Events events={EVENTS} />
             </div>
 
+            {isMobile && (
+                <img
+                    src='https://www.aion.com.cn/web/m/images/vi-tit.png?v=1658219070649'
+                    style={{ width: '100%', margin: '24px auto' }}
+                    class='video-title'></img>
+            )}
             <VideoFrame
                 coverImage='https://www.aion.com.cn/Public/Uploads/Picture/images/2018/09/327956923437499557757648215657.jpg'
                 video='https://www.aion.com.cn/Public/Video/62ta1b5da9573.mp4'
