@@ -17,7 +17,8 @@ const InfiniteDragSlider = ({ images, switchOutside }) => {
 
     const handleMouseDown = (e) => {
         setIsDragging(true);
-        setStartX(e.clientX);
+        const positionX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+        setStartX(positionX);
         setDragStartTime(Date.now());
 
         setAutoSlideFlag(false);
@@ -33,7 +34,8 @@ const InfiniteDragSlider = ({ images, switchOutside }) => {
     const handleMouseMove = (e) => {
         if (!isDragging || !sliderRef.current) return;
 
-        const currentDraggedDistance = e.clientX - startX;
+        const positionX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+        const currentDraggedDistance = positionX - startX;
         setDraggedDistance(currentDraggedDistance);
     };
 
@@ -109,7 +111,10 @@ const InfiniteDragSlider = ({ images, switchOutside }) => {
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}>
+            onMouseLeave={handleMouseUp}
+            onTouchStart={handleMouseDown}
+            onTouchMove={handleMouseMove}
+            onTouchEnd={handleMouseUp}>
             <div
                 className={`image-wrapper${
                     isDragging || hovering || autoSlideFlag ? ' quick-switch' : ''

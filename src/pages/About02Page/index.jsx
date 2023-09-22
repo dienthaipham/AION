@@ -63,36 +63,29 @@ function About02Page(props) {
                     )}
                 </div>
 
-                <div class='long-box-mobile'>
+                <div className='long-box-mobile' onClick={() => setClicked(true)}>
                     <div class='long-pic'>
-                        <div class='img-box'></div>
-                        <div class='pop'>
-                            <img src='/web/m/images/icon/hand-icon.png' class='hand-icon' />
+                        <div className={`img-box${!clicked ? ' locked' : ''}`}>
+                            <img
+                                src='https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/765265418388392512977912669178.jpeg'
+                                class='pic'
+                            />
                         </div>
+                        {!clicked && (
+                            <div class='pop'>
+                                <img
+                                    src='https://www.aion.com.cn/web/m/images/icon/hand-icon.png'
+                                    class='hand-icon'
+                                />
+                            </div>
+                        )}
                     </div>
-                    <div class='gt-img'>
-                        <img src='/Public/Uploads/Picture/images/2022/09/765265418388392512977912669178.jpeg' />
-                    </div>
+                    {/* <div class='gt-img'>
+                        <img src='https://www.aion.com.cn/web/m/images/icon/hand-icon.png' />
+                    </div> */}
                 </div>
 
                 <p class='ttil'>点击浏览</p>
-
-                {/* <div
-                    className={`long-box${!clicked ? ' locked' : ''}`}
-                    onClick={() => setClicked(true)}>
-                    <img
-                        src='https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/765265418388392512977912669178.jpeg'
-                        className='pics'
-                    />
-                    {!clicked && (
-                        <p className='pop pop-long'>
-                            <img
-                                src='https://www.aion.com.cn/web/pc/images/icon/hand-icon.png'
-                                className='hand-icon'
-                            />
-                        </p>
-                    )}
-                </div> */}
             </div>
 
             <div class='sh-box'>
