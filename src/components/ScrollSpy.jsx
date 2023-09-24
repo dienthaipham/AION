@@ -2,8 +2,15 @@ import React, { useRef, useState, useEffect } from 'react';
 import { smoothScrollTo } from '../functions/smoothScrollTo';
 import classNames from 'classnames';
 import './ScrollSpy.scss';
+import useIsMobile from '../hooks/useIsMobile';
 
 const ScrollSpy = ({ sectionsData }) => {
+    // Filter section data
+    const isMobile = useIsMobile();
+    sectionsData = isMobile
+        ? sectionsData.filter((data) => !data.pcOnly)
+        : sectionsData.filter((data) => !data.mobileOnly);
+
     const [activeSection, setActiveSection] = useState(sectionsData[0].id);
 
     const sectionRefs = sectionsData.map(() => useRef(null));
@@ -21,8 +28,7 @@ const ScrollSpy = ({ sectionsData }) => {
 
         for (let i = 0; i < sectionsData.length - 1; i++) {
             const halfwayOfNextSection =
-                sectionRefs[i + 1].current.offsetTop -
-                sectionRefs[i + 1].current.offsetHeight / 2;
+                sectionRefs[i + 1].current.offsetTop - sectionRefs[i + 1].current.offsetHeight / 2;
 
             if (window.scrollY < halfwayOfNextSection) {
                 if (isWithinTarget(sectionsData[i].id)) {
@@ -49,9 +55,8 @@ const ScrollSpy = ({ sectionsData }) => {
 
     return (
         <>
-            {(activeSection !== sectionsData[0].id ||
-                !sectionsData[0].hidden) && (
-                <div className="scroll-menu">
+            {(activeSection !== sectionsData[0].id || !sectionsData[0].hidden) && (
+                <div className='scroll-menu'>
                     {sectionsData.map((section, index) => {
                         if (section.hidden) return;
                         return (
@@ -60,8 +65,7 @@ const ScrollSpy = ({ sectionsData }) => {
                                 className={classNames('scroll-menu__item', {
                                     'scroll-menu__item--active':
                                         activeSection === section.id ||
-                                        (activeSection ===
-                                            sectionsData[index + 1]?.id &&
+                                        (activeSection === sectionsData[index + 1]?.id &&
                                             sectionsData[index + 1].merged),
                                 })}
                                 style={{
@@ -69,12 +73,8 @@ const ScrollSpy = ({ sectionsData }) => {
                                 }}
                                 onClick={() => {
                                     targetSelectedRef.current = section.id;
-                                    smoothScrollTo(
-                                        sectionRefs[index].current.offsetTop,
-                                        300
-                                    );
-                                }}
-                            >
+                                    smoothScrollTo(sectionRefs[index].current.offsetTop, 300);
+                                }}>
                                 {section.id}
                             </div>
                         );
@@ -82,11 +82,33 @@ const ScrollSpy = ({ sectionsData }) => {
                 </div>
             )}
 
-            {sectionsData.map((section, index) => (
-                <div key={section.id} ref={sectionRefs[index]}>
-                    {section.Component}
-                </div>
-            ))}
+            {sectionsData.map((section, index) => {
+                return (
+                    <div key={section.id} ref={sectionRefs[index]}>
+                        {section.Component}
+                    </div>
+                );
+
+                const both = !section.pcOnly && !section.mobileOnly;
+
+                if (isMobile) {
+                    return (
+                        (both || section.mobileOnly) && (
+                            <div key={section.id} ref={sectionRefs[index]}>
+                                {section.Component}
+                            </div>
+                        )
+                    );
+                } else {
+                    return (
+                        (both || section.pcOnly) && (
+                            <div key={section.id} ref={sectionRefs[index]}>
+                                {section.Component}
+                            </div>
+                        )
+                    );
+                }
+            })}
         </>
     );
 };

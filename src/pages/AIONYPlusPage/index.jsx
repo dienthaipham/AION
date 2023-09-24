@@ -15,25 +15,24 @@ import {
 import './AIONYPlusPage.scss';
 
 const Section6 = () => (
-    <div className="aionyplus-section-slide">
-        <div className="swiper-slide-6-btn">
+    <div className='aionyplus-section-slide'>
+        <div className='swiper-slide-6-btn'>
             <span
-                className="code-btn"
+                className='code-btn'
                 style={{
                     fontSize: '15px',
                     color: 'rgb(255, 255, 255)',
                     border: '2px solid rgb(255, 255, 255)',
                 }}
-                data-btn-url=""
-                data-btn-type="CONFIG_TABLE"
-                data-color="#FFFFFF"
-            >
+                data-btn-url=''
+                data-btn-type='CONFIG_TABLE'
+                data-color='#FFFFFF'>
                 查看详细参数
             </span>
         </div>
         <img
-            src="https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/96bd1c81-d032-4cf9-9c3f-320d67967fe4.jpg"
-            alt="广汽埃安Y"
+            src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/96bd1c81-d032-4cf9-9c3f-320d67967fe4.jpg'
+            alt='广汽埃安Y'
         />
     </div>
 );
@@ -44,8 +43,9 @@ function AIONYPlusPage() {
             id: 'Y Younger',
             Component: (
                 <Section
-                    src="https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/67a1c3a8-b699-4d9d-b262-d27ad5fdee58.jpg"
-                    alt="01"
+                    src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/67a1c3a8-b699-4d9d-b262-d27ad5fdee58.jpg'
+                    mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/390bd34f-0dc6-419b-b6be-0af2edfa1a4d.jpg'
+                    alt='01'
                 />
             ),
         },
@@ -54,34 +54,60 @@ function AIONYPlusPage() {
             Component: <OpacitySlider optionsData={OPTION1_DATA} />,
             merged: true,
         },
+
         {
             id: 'Y Plus',
             Component: (
                 <Section
-                    src="https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/06/1e8cdc95-2088-43cb-af1e-05eb763532a1.jpeg"
-                    alt="03"
+                    src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/06/1e8cdc95-2088-43cb-af1e-05eb763532a1.jpeg'
+                    alt='03'
                 />
             ),
+            pcOnly: true,
         },
         {
             id: '续航',
             Component: (
                 <Section
-                    src="https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/07/06ca9125-aa43-40d7-aac2-1dff9f487c36.jpg"
-                    alt="04"
+                    src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/07/06ca9125-aa43-40d7-aac2-1dff9f487c36.jpg'
+                    alt='04'
                 />
             ),
+            pcOnly: true,
         },
         {
             id: '空间',
             Component: (
                 <Section
-                    src="https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/07d7a7d5-4813-4062-a4e5-04d856f536d2.jpg"
-                    alt="05"
+                    src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/07d7a7d5-4813-4062-a4e5-04d856f536d2.jpg'
+                    alt='05'
                 />
             ),
+            pcOnly: true,
         },
-        { id: '动力', Component: <Section6 /> },
+        { id: '动力', Component: <Section6 />, pcOnly: true },
+
+        {
+            id: '',
+            Component: (
+                <Section
+                    mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/07/e9bcd02a-3e7b-4f65-858f-f6cbb4f99563.jpg'
+                    alt=''
+                />
+            ),
+            mobileOnly: true,
+        },
+        {
+            id: '',
+            Component: (
+                <Section
+                    mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/07/2d015fb1-a06b-45db-86e9-f200cdaa5fc2.png'
+                    alt=''
+                />
+            ),
+            mobileOnly: true,
+        },
+
         {
             id: '车型颜色',
             Component: <ColorSlider optionsData={OPTION2_DATA} />,
@@ -119,8 +145,8 @@ function AIONYPlusPage() {
             id: '服务权益',
             Component: (
                 <Section
-                    src="https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/c425c426-a700-4a4d-b005-47f8d85519b6.jpg"
-                    alt="16"
+                    src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/c425c426-a700-4a4d-b005-47f8d85519b6.jpg'
+                    alt='16'
                 />
             ),
         },
@@ -128,8 +154,8 @@ function AIONYPlusPage() {
             id: '金融方案',
             Component: (
                 <Section
-                    src="https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/08/8d95ad42-3800-47af-bdb6-49c8bbdb1bb9.jpg"
-                    alt="17"
+                    src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/08/8d95ad42-3800-47af-bdb6-49c8bbdb1bb9.jpg'
+                    alt='17'
                 />
             ),
         },

@@ -1,10 +1,13 @@
 import React from 'react';
 import './Section.scss';
+import useIsMobile from '../hooks/useIsMobile';
 
-function Section({ src, alt }) {
+function Section({ src, mobileSrc, alt }) {
+    const isMobile = useIsMobile();
+
     return (
         <div className='section-slide'>
-            <img src={src} alt={alt} loading='lazy' />
+            <img src={isMobile ? mobileSrc : src} alt={alt} loading='lazy' />
         </div>
     );
 }

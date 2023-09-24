@@ -2,21 +2,29 @@ export const OPTION1_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/e31b4bf6-434f-4608-8fac-c40c06e3ce4c.jpg',
+        mobileImageUrl:
+            'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/84a7c348-94ee-474b-acef-7eca8b731777.jpg',
         optionLabel: '无感上车 优雅启动',
     },
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/6d1c09fa-8889-4688-973f-43e8183cf101.jpg',
+        mobileImageUrl:
+            'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/27b7d7f3-90fe-4aa7-b140-8e56a36b74d9.jpg',
         optionLabel: '想坐坐 想躺躺',
     },
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/d858eef1-157a-4a3e-8abf-2557a1398504.jpg',
+        mobileImageUrl:
+            'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/78da1308-7004-47b9-94c4-3ba7ccfd9dab.jpg',
         optionLabel: '纯欲大眼 怦然心动',
     },
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/65c8da42-59f0-480c-bf4e-d15d1dc1b0b4.jpg',
+        mobileImageUrl:
+            'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/e66c5ed5-0c5c-445d-92a6-b9c2a7c04ea4.jpg',
         optionLabel: '溢出来的安全感',
     },
 ];
