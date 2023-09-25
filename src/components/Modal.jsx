@@ -4,11 +4,12 @@ import ImageSliderBase from './ImageSliderBase';
 import ImageSliderPageItemBase from './ImageSliderPageItemBase';
 import './Modal.scss';
 
-const optionsData01 = OPTION2_DATA;
-const optionsData02 = OPTION3_DATA;
-const optionsData03 = OPTION4_DATA;
+// const optionsData01 = OPTION2_DATA;
+// const optionsData02 = OPTION3_DATA;
+// const optionsData03 = OPTION4_DATA;
 
-const Modal = () => {
+const Modal = (props) => {
+    const { optionsData01, optionsData02, optionsData03 } = props;
     const [activeImageIndex01, setActiveImageIndex01] = useState(0);
     const [activeImageIndex02, setActiveImageIndex02] = useState(0);
     const [activeImageIndex03, setActiveImageIndex03] = useState(0);

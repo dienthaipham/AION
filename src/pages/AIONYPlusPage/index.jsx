@@ -116,7 +116,13 @@ function AIONYPlusPage() {
         },
         {
             id: '',
-            Component: <Modal />,
+            Component: (
+                <Modal
+                    optionsData01={OPTION2_DATA}
+                    optionsData02={OPTION3_DATA}
+                    optionsData03={OPTION4_DATA}
+                />
+            ),
             mobileOnly: true,
         },
         {
