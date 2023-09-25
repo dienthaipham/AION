@@ -1,3 +1,5 @@
+@import '../styles/_variables';
+
 .color-slider {
     position: relative;
 
@@ -103,6 +105,26 @@
             color: #3d5a74;
             line-height: 22px;
             z-index: 11;
+        }
+
+        @media screen and (max-width: $breakpoint-small) {
+            width: 95%;
+            top: 460px;
+            bottom: auto;
+            flex-wrap: wrap;
+            padding: 0;
+            justify-content: normal;
+
+            .color-wrapper {
+                padding: 8px;
+                margin: 0;
+                width: 20%;
+                flex: none;
+
+                .color-label {
+                    padding-top: 0;
+                }
+            }
         }
     }
 }

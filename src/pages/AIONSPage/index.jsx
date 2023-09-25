@@ -7,32 +7,39 @@ import {
     OPTION4_DATA,
     OPTION5_DATA,
 } from '../../constants/frame2';
+import useIsMobile from '../../hooks/useIsMobile';
 import './AIONSPage.scss';
 
 const Section1 = () => {
+    const isMobile = useIsMobile();
+
     return (
-        <div className="aions-section-slide">
-            <div className="any-main-hd">
-                <div className="any-hd-text">-2023款-</div>
-                <div className="any-hd-icon">
+        <div className='aions-section-slide'>
+            <div className='any-main-hd'>
+                <div className='any-hd-text'>-2023款-</div>
+                <div className='any-hd-icon'>
                     <img
-                        src="https://www.aion.com.cn/web/pc/images/aion-s-new/sKv-logo.png"
-                        alt=""
+                        src='https://www.aion.com.cn/web/pc/images/aion-s-new/sKv-logo.png'
+                        alt=''
                     />
                 </div>
-                <div className="any-hd-des">中高级智能轿车引领者</div>
-                <div className="any-btn">
-                    <span onclick="toConfig()">查看配置表</span>
-                    <span onclick="toBook()">预约试驾</span>
+                <div className='any-hd-des'>中高级智能轿车引领者</div>
+                <div className='any-btn'>
+                    <span onclick='toConfig()'>查看配置表</span>
+                    <span onclick='toBook()'>预约试驾</span>
                 </div>
             </div>
 
-            <div className="swiper-container" id="info-swiper">
-                <div className="swiper-wrapper">
-                    <div className="swiper-slide">
+            <div className='swiper-container' id='info-swiper'>
+                <div className='swiper-wrapper'>
+                    <div className='swiper-slide'>
                         <img
-                            src="https://www.aion.com.cn/web/pc/images/aion-s-new/aions-kv.jpg?v=167540895950020230330"
-                            alt=""
+                            src={
+                                isMobile
+                                    ? 'https://www.aion.com.cn/web/m/images/aion-s/screen-new.jpg?v=167540895950020230331'
+                                    : 'https://www.aion.com.cn/web/pc/images/aion-s-new/aions-kv.jpg?v=167540895950020230330'
+                            }
+                            alt=''
                         />
                     </div>
                 </div>
@@ -43,22 +50,19 @@ const Section1 = () => {
 
 const Section2 = () => {
     return (
-        <div className="swiper-wrapper">
-            <div className="any-btn" style={{ top: '35%' }}>
-                <span>
-                    前往了解AION S Plus
-                </span>
+        <div className='swiper-wrapper'>
+            <div className='any-btn' style={{ top: '35%' }}>
+                <span>前往了解AION S Plus</span>
             </div>
             <div
-                className="swiper-slide swiper-slide-active"
+                className='swiper-slide swiper-slide-active'
                 style={{
                     opacity: 1,
                     transform: 'translate3d(0px, 0px, 0px)',
-                }}
-            >
+                }}>
                 <img
-                    src="https://www.aion.com.cn/web/pc/images/aion-s-new/8-1.jpeg?v=1691548923807"
-                    alt="广汽埃安Y"
+                    src='https://www.aion.com.cn/web/pc/images/aion-s-new/8-1.jpeg?v=1691548923807'
+                    alt='广汽埃安Y'
                 />
             </div>
         </div>
@@ -67,22 +71,19 @@ const Section2 = () => {
 
 const Section4 = () => {
     return (
-        <div className="swiper-wrapper">
-            <div className="any-btn" style={{ top: '28%' }}>
-                <span>
-                    查看详细参数
-                </span>
+        <div className='swiper-wrapper'>
+            <div className='any-btn' style={{ top: '28%' }}>
+                <span>查看详细参数</span>
             </div>
             <div
-                className="swiper-slide swiper-slide-active"
+                className='swiper-slide swiper-slide-active'
                 style={{
                     opacity: 1,
                     transform: 'translate3d(0px, 0px, 0px)',
-                }}
-            >
+                }}>
                 <img
-                    src="https://www.aion.com.cn/web/pc/images/aion-s-new/10-1.jpeg?v=1691548923807"
-                    alt="广汽埃安Y"
+                    src='https://www.aion.com.cn/web/pc/images/aion-s-new/10-1.jpeg?v=1691548923807'
+                    alt='广汽埃安Y'
                 />
             </div>
         </div>
@@ -97,6 +98,16 @@ function AIONSPage() {
             hidden: true,
         },
         {
+            id: '',
+            Component: (
+                <Section
+                    alt=''
+                    mobileSrc='https://www.aion.com.cn/web/m/images/aion-s/params.jpg?v=1691555961031'
+                />
+            ),
+            mobileOnly: true,
+        },
+        {
             id: '续航',
             Component: <Section2 />,
         },
@@ -104,8 +115,8 @@ function AIONSPage() {
             id: '空间',
             Component: (
                 <Section
-                    alt="03"
-                    src="https://www.aion.com.cn/web/pc/images/aion-s-new/9-1.jpeg?v=1691548923807"
+                    alt='03'
+                    src='https://www.aion.com.cn/web/pc/images/aion-s-new/9-1.jpeg?v=1691548923807'
                 />
             ),
         },
@@ -138,18 +149,15 @@ function AIONSPage() {
         {
             id: '个性定制',
             Component: (
-                <Section
-                    alt="10"
-                    src="https://www.aion.com.cn/web/pc/images/aion-s-new/5-2.png"
-                />
+                <Section alt='10' src='https://www.aion.com.cn/web/pc/images/aion-s-new/5-2.png' />
             ),
         },
         {
             id: '服务权益',
             Component: (
                 <Section
-                    alt="11"
-                    src="https://www.aion.com.cn/web/pc/images/aion-s-new/serverImg.png"
+                    alt='11'
+                    src='https://www.aion.com.cn/web/pc/images/aion-s-new/serverImg.png'
                 />
             ),
         },
@@ -157,8 +165,8 @@ function AIONSPage() {
             id: '金融方案',
             Component: (
                 <Section
-                    alt="12"
-                    src="https://www.aion.com.cn/web/pc/images/aion-s-new/financeImg.png?v=1650244776666"
+                    alt='12'
+                    src='https://www.aion.com.cn/web/pc/images/aion-s-new/financeImg.png?v=1650244776666'
                 />
             ),
         },

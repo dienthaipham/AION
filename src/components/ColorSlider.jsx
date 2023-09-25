@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './ColorSlider.scss';
+import useIsMobile from '../hooks/useIsMobile';
 
 const ColorSlider = ({ optionsData }) => {
-    const images = optionsData.map((option) => option.imageUrl);
+    const isMobile = useIsMobile();
+    const images = optionsData.map((option) =>
+        isMobile ? option.mobileImageUrl : option.imageUrl,
+    );
 
     const [activeImageIndex, setActiveImageIndex] = useState(0);
 

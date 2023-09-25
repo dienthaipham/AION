@@ -1,4 +1,5 @@
 import { ColorSlider, OpacitySlider, ScrollSpy } from '../../components';
+import Modal from '../../components/Modal';
 import Section from '../../components/Section';
 import {
     OPTION10_DATA,
@@ -111,12 +112,20 @@ function AIONYPlusPage() {
         {
             id: '车型颜色',
             Component: <ColorSlider optionsData={OPTION2_DATA} />,
+            pcOnly: true,
+        },
+        {
+            id: '',
+            Component: <Modal />,
+            mobileOnly: true,
         },
         {
             id: '内饰颜色',
             Component: <OpacitySlider optionsData={OPTION3_DATA} />,
+            pcOnly: true,
         },
-        { id: '轮辋', Component: <OpacitySlider optionsData={OPTION4_DATA} /> },
+        { id: '轮辋', Component: <OpacitySlider optionsData={OPTION4_DATA} />, pcOnly: true },
+
         {
             id: '百变潮颜',
             Component: <OpacitySlider optionsData={OPTION5_DATA} />,
@@ -140,12 +149,14 @@ function AIONYPlusPage() {
         {
             id: '1年9折回购',
             Component: <OpacitySlider optionsData={OPTION10_DATA} />,
+            pcOnly: true,
         },
         {
             id: '服务权益',
             Component: (
                 <Section
                     src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/c425c426-a700-4a4d-b005-47f8d85519b6.jpg'
+                    mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/09/f9ff06e5-dff6-4c82-bd0e-fc8e1842aa81.jpg'
                     alt='16'
                 />
             ),
@@ -155,6 +166,7 @@ function AIONYPlusPage() {
             Component: (
                 <Section
                     src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/08/8d95ad42-3800-47af-bdb6-49c8bbdb1bb9.jpg'
+                    mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/08/a0b3c386-d27f-4b56-8efa-df9408e0c951.jpg'
                     alt='17'
                 />
             ),
