@@ -1,5 +1,5 @@
 import React from 'react';
-import useIsMobile from '../hooks/useIsMobile';
+import useIsMobile from '../../hooks/useIsMobile';
 import './ImageSliderBase.scss';
 
 const ImageSliderBase = ({ optionsData, activeImageIndex }) => {

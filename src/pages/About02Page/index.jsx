@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import VideoFrame from '../../components/VideoFrame';
 import Profiles from './Profiles';
 import WaseBox from './WaseBox';
-import { BOXES } from '../../constants/about2';
-import './About02Page.scss';
 import GuideModal from './GuideModal';
-import { InfiniteDragSlider } from '../../components';
-import { OPTION_DATA } from '../../constants/about2';
+import { InfiniteDragSlider, VideoFrame } from '../../components';
+import { OPTION_DATA, BOXES } from '../../constants/about2';
 import useIsMobile from '../../hooks/useIsMobile';
+import './About02Page.scss';
 
 function About02Page(props) {
     const isMobile = useIsMobile();

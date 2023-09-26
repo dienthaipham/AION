@@ -15,52 +15,9 @@ function Events(props) {
     const [isDragging, setIsDragging] = useState(false);
     const [dragStartTime, setDragStartTime] = useState(0);
 
-    // const handleMouseDown = (event) => {
-    //     setIsDragging(true);
-    //     setStartX(event.clientX);
-    //     setDragStartTime(Date.now());
-    // };
-
-    // const handleMouseMove = (event) => {
-    //     if (!isDragging || !sliderRef.current) return;
-
-    //     const newTranslateX = Math.round(event.clientX - startX) + startCurrentTranslateX.current;
-    //     setCurrentTranslateX(newTranslateX);
-    //     setDeltaX(event.clientX - startX);
-    // };
-
-    // const handleMouseUp = () => {
-    //     let newTranslateX = currentTranslateX;
-    //     const scaleTranslateX = Math.round(10 * deltaX);
-
-    //     const elapsedTime = Date.now() - dragStartTime;
-
-    //     if (elapsedTime < SWIPE_THRESHOLD) {
-    //         if (deltaX > 0.5) {
-    //             newTranslateX = Math.min(scaleTranslateX + startCurrentTranslateX.current, 0);
-    //         } else if (deltaX < -0.5) {
-    //             newTranslateX = Math.max(
-    //                 scaleTranslateX + startCurrentTranslateX.current,
-    //                 -250 * (8 - 1),
-    //             );
-    //         }
-    //     } else {
-    //         if (currentTranslateX > 0) {
-    //             newTranslateX = 0;
-    //         }
-    //     }
-
-    //     setCurrentTranslateX(newTranslateX);
-    //     startCurrentTranslateX.current = newTranslateX;
-
-    //     setIsDragging(false);
-    //     setDeltaX(0);
-    // };
-
     const handleStart = (event) => {
         setIsDragging(true);
 
-        // Determine initialX based on whether it's a mouse or touch event
         const initialX = event.type === 'mousedown' ? event.clientX : event.touches[0].clientX;
         setStartX(initialX);
         setDragStartTime(Date.now());
@@ -69,9 +26,7 @@ function Events(props) {
     const handleMove = (event) => {
         if (!isDragging || !sliderRef.current) return;
 
-        // Determine currentX based on whether it's a mouse or touch event
         const currentX = event.type === 'mousemove' ? event.clientX : event.touches[0].clientX;
-
         const newTranslateX = Math.round(currentX - startX) + startCurrentTranslateX.current;
 
         setCurrentTranslateX(newTranslateX);
@@ -79,7 +34,6 @@ function Events(props) {
     };
 
     const handleEnd = () => {
-        // Your original logic for ending the drag remains unchanged
         let newTranslateX = currentTranslateX;
         const scaleTranslateX = Math.round(10 * deltaX);
         const elapsedTime = Date.now() - dragStartTime;

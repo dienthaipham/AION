@@ -7,7 +7,7 @@
         list-style: none;
         padding: 0;
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-large) {
             width: 90%;
             margin: 16px auto;
         }

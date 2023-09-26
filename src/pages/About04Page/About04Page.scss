@@ -5,7 +5,7 @@
     margin: 0 auto;
     margin-bottom: 64px;
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-large) {
         width: auto;
         margin: 0 18px;
     }
@@ -33,7 +33,7 @@
         line-height: 30px;
         font-size: 17px;
         margin: 0 0 10px;
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-large) {
             font-size: 1.92rem;
             line-height: 3.82rem;
         }
@@ -44,7 +44,7 @@
         margin: 6% 0;
         position: relative;
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-large) {
             margin: 12% 0;
         }
 
@@ -108,7 +108,7 @@
                     top: -40px !important;
                 }
 
-                @media screen and (max-width: $breakpoint-small) {
+                @media screen and (max-width: $breakpoint-large) {
                     width: 50px;
                     height: 50px;
                     font-size: 2.2rem;
@@ -161,7 +161,7 @@
             display: block !important;
         }
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-large) {
             min-height: auto;
             width: 100%;
             font-size: 1.92rem;

@@ -35,7 +35,7 @@
         opacity: 1;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-large) {
         display: none;
     }
 }

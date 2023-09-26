@@ -127,10 +127,10 @@
             }
         }
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-large) {
             width: 90%;
             min-width: auto;
-            height: 470px;
+            height: 80%;
             position: absolute;
             left: 50%;
             top: 17%;
@@ -190,7 +190,7 @@
         width: 100%;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-large) {
         width: 100%;
         margin-top: 40px;
     }

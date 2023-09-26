@@ -1,6 +1,4 @@
-import { ColorSlider, OpacitySlider, ScrollSpy } from '../../components';
-import Modal from '../../components/Modal';
-import Section from '../../components/Section';
+import { ColorSlider, OpacitySlider, ScrollSpy, Modal, Section } from '../../components';
 import {
     OPTION10_DATA,
     OPTION1_DATA,

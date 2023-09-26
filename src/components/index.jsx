@@ -6,3 +6,5 @@ export { default as ScrollSpy } from './ScrollSpy';
 export { default as TransformSlider } from './TransformSlider';
 export { default as Footer } from './Footer';
 export { default as Section } from './Section';
+export { default as Modal } from './mobile-only/Modal';
+export { default as VideoFrame } from './VideoFrame';

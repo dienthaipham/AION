@@ -148,7 +148,7 @@
         display: none;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-large) {
         width: auto;
         background-color: #e7e7e7;
 
@@ -341,7 +341,7 @@
         }
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: $breakpoint-large) {
         .pic-tit {
             width: auto;
         }

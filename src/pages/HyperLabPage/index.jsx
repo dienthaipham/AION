@@ -1,8 +1,8 @@
 import React from 'react';
 import { TransformSlider, Section, InfiniteDragSlider } from '../../components';
 import { OPTION1_DATA, OPTION2_DATA } from '../../constants/frame4';
-import './HyperLabPage.scss';
 import useIsMobile from '../../hooks/useIsMobile';
+import './HyperLabPage.scss';
 
 function HyperLabPage(props) {
     const isMobile = useIsMobile();

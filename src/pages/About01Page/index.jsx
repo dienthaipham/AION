@@ -1,9 +1,9 @@
-import React, { useState, useRef } from 'react';
 import classNames from 'classnames';
-import Events from './Events';
+import React, { useState } from 'react';
+import { VideoFrame } from '../../components';
 import { EVENTS } from '../../constants/about1';
-import VideoFrame from '../../components/VideoFrame';
 import useIsMobile from '../../hooks/useIsMobile';
+import Events from './Events';
 import './About01Page.scss';
 
 const sections = ['埃安', '智联产业园', '新能源工厂'];

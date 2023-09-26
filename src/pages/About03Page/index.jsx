@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Section } from '../../components';
-import './About03Page.scss';
 import NewItem from './NewItem';
 import Pagination from './Pagination';
 import useIsMobile from '../../hooks/useIsMobile';
+import './About03Page.scss';
 
 const DATA = [
     {

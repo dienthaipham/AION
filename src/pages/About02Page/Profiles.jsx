@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './Profiles.scss';
 import useIsMobile from '../../hooks/useIsMobile';
+import './Profiles.scss';
 
 function Profiles(props) {
     const isMobile = useIsMobile();

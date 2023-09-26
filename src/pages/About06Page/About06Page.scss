@@ -57,7 +57,7 @@
         background-color: #ffffff;
         color: #272727;
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-large) {
             padding: 0 3.7rem;
         }
 
@@ -96,7 +96,7 @@
                 flex: 1;
             }
 
-            @media screen and (max-width: $breakpoint-small) {
+            @media screen and (max-width: $breakpoint-large) {
                 display: block;
 
                 &__box-l {
@@ -131,7 +131,7 @@
                 font-weight: 300;
             }
 
-            @media screen and (max-width: $breakpoint-small) {
+            @media screen and (max-width: $breakpoint-large) {
                 display: flex;
 
                 &__info-r {
@@ -149,7 +149,7 @@
                 display: none;
             }
 
-            @media screen and (max-width: $breakpoint-small) {
+            @media screen and (max-width: $breakpoint-large) {
                 display: none;
 
                 &--mobile {

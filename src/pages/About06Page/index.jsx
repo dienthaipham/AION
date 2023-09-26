@@ -1,6 +1,6 @@
 import React from 'react';
-import './About06Page.scss';
 import useIsMobile from '../../hooks/useIsMobile';
+import './About06Page.scss';
 
 function About06Page(props) {
     const isMobile = useIsMobile();
