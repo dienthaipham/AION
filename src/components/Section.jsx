@@ -2,7 +2,8 @@ import React from 'react';
 import './Section.scss';
 import useIsMobile from '../hooks/useIsMobile';
 
-function Section({ src, mobileSrc, alt }) {
+function Section(props) {
+    const { src, mobileSrc, alt } = props;
     const isMobile = useIsMobile();
 
     return (

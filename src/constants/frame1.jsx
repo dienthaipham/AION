@@ -134,7 +134,7 @@ export const OPTION2_DATA = [
             'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/836771732878699398798934117834.jpg',
         mobileImageUrl:
             'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/399286154636251758273779971127.jpg',
-        colorLabel: '小确杏+黑色车顶',
+        colorLabel: '小确杏黑色车顶',
         colorImageUrl:
             'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/376262597834721811811769864677.png',
     },
@@ -143,7 +143,7 @@ export const OPTION2_DATA = [
             'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/184119759961748918499876534595.jpg',
         mobileImageUrl:
             'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/658877363953941787995963196351.jpg',
-        colorLabel: '星漫绿+黑色车顶',
+        colorLabel: '星漫绿黑色车顶',
         colorImageUrl:
             'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/641892449569115795716471474912.png',
     },
@@ -152,7 +152,7 @@ export const OPTION2_DATA = [
             'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/934489753132975128145925342296.jpg',
         mobileImageUrl:
             'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/481965691435255818441561572696.jpg',
-        colorLabel: '极地白+黑色车顶',
+        colorLabel: '极地白黑色车顶',
         colorImageUrl:
             'https://static.gacne.com.cn/Public/Uploads/Picture/images/2021/04/278415228734665768626568375698.png',
     },

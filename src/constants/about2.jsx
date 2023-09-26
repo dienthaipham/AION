@@ -26,7 +26,22 @@ export const BOXES = [
 ];
 
 export const OPTION_DATA = [
-    'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/483579579539694238275478347515.png',
-    'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/371577639892845752518473526968.png',
-    'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/916928128849718734682859282561.png',
+    {
+        imageUrl:
+            'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/483579579539694238275478347515.png',
+        mobileImageUrl:
+            'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/483579579539694238275478347515.png',
+    },
+    {
+        imageUrl:
+            'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/371577639892845752518473526968.png',
+        mobileImageUrl:
+            'https://static.gacne.com.cn/Public/Uploads/Picture/images/2022/09/371577639892845752518473526968.png',
+    },
+    {
+        imageUrl:
+            'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/916928128849718734682859282561.png',
+        mobileImageUrl:
+            'https://www.aion.com.cn/Public/Uploads/Picture/images/2022/09/916928128849718734682859282561.png',
+    },
 ];

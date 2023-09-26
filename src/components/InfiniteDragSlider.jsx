@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './InfiniteDragSlider.scss';
+import useIsMobile from '../hooks/useIsMobile';
 
 const SWIPE_THRESHOLD = 200; // Time in milliseconds
 
-const InfiniteDragSlider = ({ images, switchOutside }) => {
+const InfiniteDragSlider = ({ optionsData, switchOutside }) => {
+    const isMobile = useIsMobile();
+    const images = optionsData.map((option) =>
+        isMobile ? option.mobileImageUrl : option.imageUrl,
+    );
     const sliderRef = useRef(null);
 
     const [activeImageIndex, setActiveImageIndex] = useState(1);

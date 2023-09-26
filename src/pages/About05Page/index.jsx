@@ -5,12 +5,10 @@ import useIsMobile from '../../hooks/useIsMobile';
 import './About05Page.scss';
 
 function About05Page(props) {
-    const isMobile = useIsMobile();
-
     return (
         <React.Fragment>
-            {SECTION_IMAGES.map(({ image, mobileImage }) => (
-                <Section src={isMobile ? mobileImage : image} alt='' />
+            {SECTION_IMAGES.map(({ imageUrl, mobileImageUrl }) => (
+                <Section src={imageUrl} mobileSrc={mobileImageUrl} alt='' />
             ))}
         </React.Fragment>
     );

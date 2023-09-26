@@ -11,11 +11,8 @@ function About04Page(props) {
     return (
         <div>
             <Section
-                src={
-                    isMobile
-                        ? 'https://www.aion.com.cn/web/m/images/aion-more/recruit-banner.png'
-                        : 'https://www.aion.com.cn/web/pc/images/zp-banner.png?v=1658219070649'
-                }
+                src='https://www.aion.com.cn/web/pc/images/zp-banner.png?v=1658219070649'
+                mobileSrc='https://www.aion.com.cn/web/m/images/aion-more/recruit-banner.png'
                 alt=''
             />
 

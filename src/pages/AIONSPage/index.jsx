@@ -1,4 +1,5 @@
 import { ColorSlider, OpacitySlider, ScrollSpy } from '../../components';
+import Modal from '../../components/Modal';
 import Section from '../../components/Section';
 import {
     OPTION1_DATA,
@@ -6,6 +7,7 @@ import {
     OPTION3_DATA,
     OPTION4_DATA,
     OPTION5_DATA,
+    OPTION6_DATA,
 } from '../../constants/frame2';
 import useIsMobile from '../../hooks/useIsMobile';
 import './AIONSPage.scss';
@@ -15,20 +17,22 @@ const Section1 = () => {
 
     return (
         <div className='aions-section-slide'>
-            <div className='any-main-hd'>
-                <div className='any-hd-text'>-2023款-</div>
-                <div className='any-hd-icon'>
-                    <img
-                        src='https://www.aion.com.cn/web/pc/images/aion-s-new/sKv-logo.png'
-                        alt=''
-                    />
+            {!isMobile && (
+                <div className='any-main-hd'>
+                    <div className='any-hd-text'>-2023款-</div>
+                    <div className='any-hd-icon'>
+                        <img
+                            src='https://www.aion.com.cn/web/pc/images/aion-s-new/sKv-logo.png'
+                            alt=''
+                        />
+                    </div>
+                    <div className='any-hd-des'>中高级智能轿车引领者</div>
+                    <div className='any-btn'>
+                        <span onclick='toConfig()'>查看配置表</span>
+                        <span onclick='toBook()'>预约试驾</span>
+                    </div>
                 </div>
-                <div className='any-hd-des'>中高级智能轿车引领者</div>
-                <div className='any-btn'>
-                    <span onclick='toConfig()'>查看配置表</span>
-                    <span onclick='toBook()'>预约试驾</span>
-                </div>
-            </div>
+            )}
 
             <div className='swiper-container' id='info-swiper'>
                 <div className='swiper-wrapper'>
@@ -110,6 +114,7 @@ function AIONSPage() {
         {
             id: '续航',
             Component: <Section2 />,
+            pcOnly: true,
         },
         {
             id: '空间',
@@ -119,20 +124,37 @@ function AIONSPage() {
                     src='https://www.aion.com.cn/web/pc/images/aion-s-new/9-1.jpeg?v=1691548923807'
                 />
             ),
+            pcOnly: true,
         },
         {
             id: '动力',
             Component: <Section4 />,
+            pcOnly: true,
+        },
+
+        {
+            id: '动力',
+            Component: (
+                <Modal
+                    optionsData01={OPTION1_DATA}
+                    optionsData02={OPTION2_DATA}
+                    optionsData03={OPTION6_DATA}
+                />
+            ),
+            mobileOnly: true,
         },
 
         {
             id: '车身颜色',
             Component: <ColorSlider optionsData={OPTION1_DATA} />,
+            pcOnly: true,
         },
         {
             id: '内饰颜色',
             Component: <OpacitySlider optionsData={OPTION2_DATA} />,
+            pcOnly: true,
         },
+
         {
             id: '车型颜色',
             Component: <OpacitySlider optionsData={OPTION3_DATA} />,
@@ -149,7 +171,11 @@ function AIONSPage() {
         {
             id: '个性定制',
             Component: (
-                <Section alt='10' src='https://www.aion.com.cn/web/pc/images/aion-s-new/5-2.png' />
+                <Section
+                    alt='10'
+                    src='https://www.aion.com.cn/web/pc/images/aion-s-new/5-2.png'
+                    mobileSrc='https://www.aion.com.cn/web/m/images/aion-s/5-1.png'
+                />
             ),
         },
         {
@@ -158,6 +184,7 @@ function AIONSPage() {
                 <Section
                     alt='11'
                     src='https://www.aion.com.cn/web/pc/images/aion-s-new/serverImg.png'
+                    mobileSrc='https://www.aion.com.cn/web/m/images/aion-s/serverImg.jpg?v=1666949385018'
                 />
             ),
         },
@@ -167,6 +194,7 @@ function AIONSPage() {
                 <Section
                     alt='12'
                     src='https://www.aion.com.cn/web/pc/images/aion-s-new/financeImg.png?v=1650244776666'
+                    mobileSrc='https://www.aion.com.cn/web/m/images/aion-s/financial-new.png?v=1650244856216'
                 />
             ),
         },
