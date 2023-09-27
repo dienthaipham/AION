@@ -1,4 +1,4 @@
-export const OPTION1_DATA = [
+export const BRANCH_DATA = [
     {
         imageUrl:
             'https://www.aion.com.cn/web/pc/images/website-science/tech-s2-a1-new.jpg?v=1675568853543',
@@ -25,7 +25,7 @@ export const OPTION1_DATA = [
     },
 ];
 
-export const OPTION2_DATA = [
+export const SMART_COCKPIT_DATA = [
     {
         imageUrl:
             'https://www.aion.com.cn/web/pc/images/website-science/tech-s4-a1.jpg?v=1675568853547',

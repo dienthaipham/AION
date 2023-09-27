@@ -1,10 +1,10 @@
 import React from 'react';
 import { InfiniteDragSlider } from '../../components';
-import { OPTION_DATA } from '../../constants/frame3';
+import { SERVICE_DATA } from '../../constants/ServicePage';
 import './ServicePage.scss';
 
 function ServicePage(props) {
-    return <InfiniteDragSlider optionsData={OPTION_DATA} />;
+    return <InfiniteDragSlider optionsData={SERVICE_DATA} />;
 }
 
 export default ServicePage;

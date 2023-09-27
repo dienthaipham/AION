@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Section } from '../../components';
 import useIsMobile from '../../hooks/useIsMobile';
-import './About04Page.scss';
+import './RecruitmentPage.scss';
 
-function About04Page(props) {
+function RecruitmentPage(props) {
     const steps = ['企业文化', '招聘策略', '薪酬福利', '人才培训', '职业发展'];
     const isMobile = useIsMobile();
     const [activeIndex, setActiveIndex] = useState(0);
@@ -107,4 +107,4 @@ function About04Page(props) {
     );
 }
 
-export default About04Page;
+export default RecruitmentPage;

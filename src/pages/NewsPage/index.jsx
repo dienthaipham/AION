@@ -3,7 +3,7 @@ import { Section } from '../../components';
 import NewItem from './NewItem';
 import Pagination from './Pagination';
 import useIsMobile from '../../hooks/useIsMobile';
-import './About03Page.scss';
+import './NewsPage.scss';
 
 const DATA = [
     {
@@ -22,7 +22,7 @@ const DATA = [
     },
 ];
 
-function About03Page(props) {
+function NewsPage(props) {
     const isMobile = useIsMobile();
 
     return (
@@ -46,4 +46,4 @@ function About03Page(props) {
     );
 }
 
-export default About03Page;
+export default NewsPage;

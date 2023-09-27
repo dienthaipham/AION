@@ -2,13 +2,15 @@ import AIONYPlusPage from '../pages/AIONYPlusPage';
 import HyperLabPage from '../pages/HyperLabPage';
 import ServicePage from '../pages/ServicePage';
 import AIONSPage from '../pages/AIONSPage';
-import WordPressSinglePage from '../components/WordPressSinglePage';
-import About06Page from '../pages/About06Page';
-import About05Page from '../pages/About05Page';
-import About04Page from '../pages/About04Page';
-import About03Page from '../pages/About03Page';
-import About01Page from '../pages/About01Page';
-import About02Page from '../pages/About02Page';
+import About06Page from '../pages/AnnouncementPage';
+import About05Page from '../pages/CooperationPage';
+import About04Page from '../pages/RecruitmentPage';
+import CompanyInformationPage from '../pages/CompanyInformationPage';
+import UnicornPage from '../pages/UnicornPage';
+import NewsPage from '../pages/NewsPage';
+import RecruitmentPage from '../pages/RecruitmentPage';
+import CooperationPage from '../pages/CooperationPage';
+import AnnouncementPage from '../pages/AnnouncementPage';
 
 export const MAIN_ROUTES = [
     // {
@@ -42,31 +44,31 @@ export const ABOUT_ROUTES = [
     {
         name: '关于埃安',
         path: '/show/about_us',
-        element: <About01Page />,
+        element: <CompanyInformationPage />,
     },
     {
         name: '北鼻一家',
         path: '/show/unicorn',
-        element: <About02Page />,
+        element: <UnicornPage />,
     },
     {
         name: '新闻资讯',
         path: '/show/news',
-        element: <About03Page />,
+        element: <NewsPage />,
     },
     {
         name: '人才招聘',
         path: '/show/join',
-        element: <About04Page />,
+        element: <RecruitmentPage />,
     },
     {
         name: '合作加盟',
         path: '/show/cooperation',
-        element: <About05Page />,
+        element: <CooperationPage />,
     },
     {
         name: '信息公示',
         path: '/information/announcement',
-        element: <About06Page />,
+        element: <AnnouncementPage />,
     },
 ];

@@ -1,12 +1,12 @@
 import { ColorSlider, OpacitySlider, ScrollSpy, Modal, Section } from '../../components';
 import {
-    OPTION1_DATA,
-    OPTION2_DATA,
-    OPTION3_DATA,
-    OPTION4_DATA,
-    OPTION5_DATA,
-    OPTION6_DATA,
-} from '../../constants/frame2';
+    CAR_COLOR_DATA,
+    INTERIOR_COLOR_DATA,
+    BATTERY_DATA,
+    SPACE_DATA,
+    LOOKS_DATA,
+    RIM_DATA,
+} from '../../constants/AIONSPage';
 import useIsMobile from '../../hooks/useIsMobile';
 import './AIONSPage.scss';
 
@@ -95,17 +95,14 @@ const Section4 = () => {
 function AIONSPage() {
     const sectionsData = [
         {
-            id: '',
+            id: '001',
             Component: <Section1 />,
             hidden: true,
         },
         {
-            id: '',
+            id: '002',
             Component: (
-                <Section
-                    alt=''
-                    mobileSrc='https://www.aion.com.cn/web/m/images/aion-s/params.jpg?v=1691555961031'
-                />
+                <Section mobileSrc='https://www.aion.com.cn/web/m/images/aion-s/params.jpg?v=1691555961031' />
             ),
             mobileOnly: true,
         },
@@ -118,7 +115,7 @@ function AIONSPage() {
             id: '空间',
             Component: (
                 <Section
-                    alt='03'
+                    alt='空间'
                     src='https://www.aion.com.cn/web/pc/images/aion-s-new/9-1.jpeg?v=1691548923807'
                 />
             ),
@@ -134,9 +131,9 @@ function AIONSPage() {
             id: '动力',
             Component: (
                 <Modal
-                    optionsData01={OPTION1_DATA}
-                    optionsData02={OPTION2_DATA}
-                    optionsData03={OPTION6_DATA}
+                    carColorData={CAR_COLOR_DATA}
+                    interiorColorData={INTERIOR_COLOR_DATA}
+                    rimData={RIM_DATA}
                 />
             ),
             mobileOnly: true,
@@ -144,33 +141,33 @@ function AIONSPage() {
 
         {
             id: '车身颜色',
-            Component: <ColorSlider optionsData={OPTION1_DATA} />,
+            Component: <ColorSlider optionsData={CAR_COLOR_DATA} />,
             pcOnly: true,
         },
         {
             id: '内饰颜色',
-            Component: <OpacitySlider optionsData={OPTION2_DATA} />,
+            Component: <OpacitySlider optionsData={INTERIOR_COLOR_DATA} />,
             pcOnly: true,
         },
 
         {
             id: '车型颜色',
-            Component: <OpacitySlider optionsData={OPTION3_DATA} />,
+            Component: <OpacitySlider optionsData={BATTERY_DATA} />,
         },
         {
             id: '大空间',
-            Component: <OpacitySlider optionsData={OPTION4_DATA} />,
+            Component: <OpacitySlider optionsData={SPACE_DATA} />,
         },
         {
             id: '高颜值',
-            Component: <OpacitySlider optionsData={OPTION5_DATA} />,
+            Component: <OpacitySlider optionsData={LOOKS_DATA} />,
         },
 
         {
             id: '个性定制',
             Component: (
                 <Section
-                    alt='10'
+                    alt='个性定制'
                     src='https://www.aion.com.cn/web/pc/images/aion-s-new/5-2.png'
                     mobileSrc='https://www.aion.com.cn/web/m/images/aion-s/5-1.png'
                 />
@@ -180,7 +177,7 @@ function AIONSPage() {
             id: '服务权益',
             Component: (
                 <Section
-                    alt='11'
+                    alt='服务权益'
                     src='https://www.aion.com.cn/web/pc/images/aion-s-new/serverImg.png'
                     mobileSrc='https://www.aion.com.cn/web/m/images/aion-s/serverImg.jpg?v=1666949385018'
                 />
@@ -190,7 +187,7 @@ function AIONSPage() {
             id: '金融方案',
             Component: (
                 <Section
-                    alt='12'
+                    alt='金融方案'
                     src='https://www.aion.com.cn/web/pc/images/aion-s-new/financeImg.png?v=1650244776666'
                     mobileSrc='https://www.aion.com.cn/web/m/images/aion-s/financial-new.png?v=1650244856216'
                 />

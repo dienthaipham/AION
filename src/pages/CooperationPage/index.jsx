@@ -1,9 +1,9 @@
 import React from 'react';
 import { Section } from '../../components';
-import { SECTION_IMAGES } from '../../constants/about5';
-import './About05Page.scss';
+import { SECTION_IMAGES } from '../../constants/CooperationPage';
+import './CooperationPage.scss';
 
-function About05Page(props) {
+function CooperationPage(props) {
     return (
         <React.Fragment>
             {SECTION_IMAGES.map(({ imageUrl, mobileImageUrl }) => (
@@ -13,4 +13,4 @@ function About05Page(props) {
     );
 }
 
-export default About05Page;
+export default CooperationPage;

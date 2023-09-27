@@ -14,26 +14,6 @@ const OpacitySlider = ({ optionsData }) => {
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
 
-    // const handleMouseDown = (e) => {
-    //     setIsDragging(true);
-    //     setStartX(e.clientX);
-    // };
-
-    // const handleMouseMove = (e) => {
-    //     if (!isDragging) return;
-    //     if (e.clientX - startX > 50) {
-    //         setActiveImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    //         setIsDragging(false);
-    //     } else if (startX - e.clientX > 50) {
-    //         setActiveImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    //         setIsDragging(false);
-    //     }
-    // };
-
-    // const handleMouseUp = () => {
-    //     setIsDragging(false);
-    // };
-
     const handleMouseDown = (e) => {
         setIsDragging(true);
         const x = e.clientX || (e.touches && e.touches[0] && e.touches[0].clientX);

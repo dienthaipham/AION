@@ -1,8 +1,8 @@
 import React from 'react';
 import useIsMobile from '../../hooks/useIsMobile';
-import './About06Page.scss';
+import './AnnouncementPage.scss';
 
-function About06Page(props) {
+function AnnouncementPage(props) {
     const isMobile = useIsMobile();
 
     return (
@@ -206,4 +206,4 @@ function About06Page(props) {
     );
 }
 
-export default About06Page;
+export default AnnouncementPage;

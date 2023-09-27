@@ -1,4 +1,4 @@
-export const OPTION1_DATA = [
+export const Y_YOUNGER_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/e31b4bf6-434f-4608-8fac-c40c06e3ce4c.jpg',
@@ -29,7 +29,7 @@ export const OPTION1_DATA = [
     },
 ];
 
-export const OPTION2_DATA = [
+export const CAR_COLOR_DATA = [
     {
         imageUrl:
             'https://www.aion.com.cn/Public/Uploads/Picture/images/2023/03/267881341259321321339957997475.png',
@@ -158,7 +158,7 @@ export const OPTION2_DATA = [
     },
 ];
 
-export const OPTION3_DATA = [
+export const INTERIOR_COLOR_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/10/76cee29e-6e85-4cc9-acc4-6a66ab41d8d2.jpg',
@@ -206,7 +206,7 @@ export const OPTION3_DATA = [
     },
 ];
 
-export const OPTION4_DATA = [
+export const RIM_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/cebee12f-73dc-4406-bc49-6727d7b13663.jpg',
@@ -254,7 +254,7 @@ export const OPTION4_DATA = [
     },
 ];
 
-export const OPTION5_DATA = [
+export const TRENDY_LOOKS_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/37a0164d-dea9-464c-a4e5-31d1ca1343bc.jpg',
@@ -278,7 +278,7 @@ export const OPTION5_DATA = [
     },
 ];
 
-export const OPTION6_DATA = [
+export const CAMPING_CAR_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/00ae5fed-bdfc-4448-8fb7-ba0c71313b54.jpg',
@@ -309,7 +309,7 @@ export const OPTION6_DATA = [
     },
 ];
 
-export const OPTION7_DATA = [
+export const SMART_COCKPIT_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/62045047-d57f-4eef-8bfd-63a0e9ebeb98.jpg',
@@ -354,7 +354,7 @@ export const OPTION7_DATA = [
     },
 ];
 
-export const OPTION8_DATA = [
+export const SMART_DRIVING_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/c87d0430-4f1c-4eca-bb12-73fcc02cf284.jpg',
@@ -378,7 +378,7 @@ export const OPTION8_DATA = [
     },
 ];
 
-export const OPTION9_DATA = [
+export const BATTERY_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/3277bbaa-d0c5-4f9b-90ce-7f0b61085917.jpg',
@@ -395,7 +395,7 @@ export const OPTION9_DATA = [
     },
 ];
 
-export const OPTION10_DATA = [
+export const BUYBACK_DATA = [
     {
         imageUrl:
             'https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/bae96435-570a-4e4e-958a-45c956b9b2a2.jpg',

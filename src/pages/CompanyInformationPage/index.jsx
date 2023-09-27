@@ -1,14 +1,14 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { VideoFrame } from '../../components';
-import { EVENTS } from '../../constants/about1';
+import { EVENTS } from '../../constants/CompanyInformationPage';
 import useIsMobile from '../../hooks/useIsMobile';
 import Events from './Events';
-import './About01Page.scss';
+import './CompanyInformationPage.scss';
 
 const sections = ['埃安', '智联产业园', '新能源工厂'];
 
-function About01Page(props) {
+function CompanyInformationPage(props) {
     const isMobile = useIsMobile();
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -126,4 +126,4 @@ function About01Page(props) {
     );
 }
 
-export default About01Page;
+export default CompanyInformationPage;

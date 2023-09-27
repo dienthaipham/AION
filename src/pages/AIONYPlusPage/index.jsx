@@ -1,40 +1,17 @@
-import { ColorSlider, OpacitySlider, ScrollSpy, Modal, Section } from '../../components';
+import { ColorSlider, Modal, OpacitySlider, ScrollSpy, Section } from '../../components';
 import {
-    OPTION10_DATA,
-    OPTION1_DATA,
-    OPTION2_DATA,
-    OPTION3_DATA,
-    OPTION4_DATA,
-    OPTION5_DATA,
-    OPTION6_DATA,
-    OPTION7_DATA,
-    OPTION8_DATA,
-    OPTION9_DATA,
-} from '../../constants/frame1';
-import './AIONYPlusPage.scss';
-
-const Section6 = () => (
-    <div className='aionyplus-section-slide'>
-        <div className='swiper-slide-6-btn'>
-            <span
-                className='code-btn'
-                style={{
-                    fontSize: '15px',
-                    color: 'rgb(255, 255, 255)',
-                    border: '2px solid rgb(255, 255, 255)',
-                }}
-                data-btn-url=''
-                data-btn-type='CONFIG_TABLE'
-                data-color='#FFFFFF'>
-                查看详细参数
-            </span>
-        </div>
-        <img
-            src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/96bd1c81-d032-4cf9-9c3f-320d67967fe4.jpg'
-            alt='广汽埃安Y'
-        />
-    </div>
-);
+    Y_YOUNGER_DATA,
+    CAR_COLOR_DATA,
+    INTERIOR_COLOR_DATA,
+    RIM_DATA,
+    TRENDY_LOOKS_DATA,
+    CAMPING_CAR_DATA,
+    SMART_COCKPIT_DATA,
+    SMART_DRIVING_DATA,
+    BATTERY_DATA,
+    BUYBACK_DATA,
+} from '../../constants/AIONYPlusPage';
+import PowerSlide from './PowerSlide';
 
 function AIONYPlusPage() {
     const sectionsData = [
@@ -44,13 +21,13 @@ function AIONYPlusPage() {
                 <Section
                     src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/67a1c3a8-b699-4d9d-b262-d27ad5fdee58.jpg'
                     mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/03/390bd34f-0dc6-419b-b6be-0af2edfa1a4d.jpg'
-                    alt='01'
+                    alt='Y Younger'
                 />
             ),
         },
         {
-            id: 'Y Younger',
-            Component: <OpacitySlider optionsData={OPTION1_DATA} />,
+            id: 'Y Younger (1)',
+            Component: <OpacitySlider optionsData={Y_YOUNGER_DATA} />,
             merged: true,
         },
 
@@ -59,7 +36,7 @@ function AIONYPlusPage() {
             Component: (
                 <Section
                     src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/06/1e8cdc95-2088-43cb-af1e-05eb763532a1.jpeg'
-                    alt='03'
+                    alt='Y Plus'
                 />
             ),
             pcOnly: true,
@@ -69,7 +46,7 @@ function AIONYPlusPage() {
             Component: (
                 <Section
                     src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/07/06ca9125-aa43-40d7-aac2-1dff9f487c36.jpg'
-                    alt='04'
+                    alt='续航'
                 />
             ),
             pcOnly: true,
@@ -79,80 +56,74 @@ function AIONYPlusPage() {
             Component: (
                 <Section
                     src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/07d7a7d5-4813-4062-a4e5-04d856f536d2.jpg'
-                    alt='05'
+                    alt='空间'
                 />
             ),
             pcOnly: true,
         },
-        { id: '动力', Component: <Section6 />, pcOnly: true },
+        { id: '动力', Component: <PowerSlide />, pcOnly: true },
 
         {
-            id: '',
+            id: 'e9bcd02a',
             Component: (
-                <Section
-                    mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/07/e9bcd02a-3e7b-4f65-858f-f6cbb4f99563.jpg'
-                    alt=''
-                />
+                <Section mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/07/e9bcd02a-3e7b-4f65-858f-f6cbb4f99563.jpg' />
             ),
             mobileOnly: true,
         },
         {
-            id: '',
+            id: '2d015fb1',
             Component: (
-                <Section
-                    mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/07/2d015fb1-a06b-45db-86e9-f200cdaa5fc2.png'
-                    alt=''
-                />
+                <Section mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/07/2d015fb1-a06b-45db-86e9-f200cdaa5fc2.png' />
             ),
             mobileOnly: true,
         },
 
         {
             id: '车型颜色',
-            Component: <ColorSlider optionsData={OPTION2_DATA} />,
+            Component: <ColorSlider optionsData={CAR_COLOR_DATA} />,
             pcOnly: true,
         },
         {
-            id: '',
+            id: 'car-modal',
             Component: (
                 <Modal
-                    optionsData01={OPTION2_DATA}
-                    optionsData02={OPTION3_DATA}
-                    optionsData03={OPTION4_DATA}
+                    carColorData={CAR_COLOR_DATA}
+                    interiorColorData={INTERIOR_COLOR_DATA}
+                    rimData={RIM_DATA}
                 />
             ),
             mobileOnly: true,
         },
         {
             id: '内饰颜色',
-            Component: <OpacitySlider optionsData={OPTION3_DATA} />,
+            Component: <OpacitySlider optionsData={INTERIOR_COLOR_DATA} />,
             pcOnly: true,
         },
-        { id: '轮辋', Component: <OpacitySlider optionsData={OPTION4_DATA} />, pcOnly: true },
+        { id: '轮辋', Component: <OpacitySlider optionsData={RIM_DATA} />, pcOnly: true },
 
         {
             id: '百变潮颜',
-            Component: <OpacitySlider optionsData={OPTION5_DATA} />,
+            Component: <OpacitySlider optionsData={TRENDY_LOOKS_DATA} />,
         },
         {
             id: '露营神车',
-            Component: <OpacitySlider optionsData={OPTION6_DATA} />,
+            Component: <OpacitySlider optionsData={CAMPING_CAR_DATA} />,
         },
         {
             id: '智能座舱',
-            Component: <OpacitySlider optionsData={OPTION7_DATA} />,
+            Component: <OpacitySlider optionsData={SMART_COCKPIT_DATA} />,
         },
         {
             id: '指尖潮玩  智驾泊车',
-            Component: <OpacitySlider optionsData={OPTION8_DATA} />,
+            Component: <OpacitySlider optionsData={SMART_DRIVING_DATA} />,
         },
         {
             id: '弹匣电池',
-            Component: <OpacitySlider optionsData={OPTION9_DATA} />,
+            Component: <OpacitySlider optionsData={BATTERY_DATA} />,
         },
         {
             id: '1年9折回购',
-            Component: <OpacitySlider optionsData={OPTION10_DATA} />,
+            Component: <OpacitySlider optionsData={BUYBACK_DATA} />,
             pcOnly: true,
         },
         {
@@ -161,7 +132,7 @@ function AIONYPlusPage() {
                 <Section
                     src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2022/09/c425c426-a700-4a4d-b005-47f8d85519b6.jpg'
                     mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/09/f9ff06e5-dff6-4c82-bd0e-fc8e1842aa81.jpg'
-                    alt='16'
+                    alt='服务权益'
                 />
             ),
         },
@@ -171,7 +142,7 @@ function AIONYPlusPage() {
                 <Section
                     src='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/08/8d95ad42-3800-47af-bdb6-49c8bbdb1bb9.jpg'
                     mobileSrc='https://static.gacne.com.cn/Public/Uploads/home/pic/file/2023/08/a0b3c386-d27f-4b56-8efa-df9408e0c951.jpg'
-                    alt='17'
+                    alt='金融方案'
                 />
             ),
         },

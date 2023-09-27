@@ -1,19 +1,20 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { smoothScrollTo } from '../functions/smoothScrollTo';
 import classNames from 'classnames';
-import './ScrollSpy.scss';
 import useIsMobile from '../hooks/useIsMobile';
+import './ScrollSpy.scss';
 
-const ScrollSpy = ({ sectionsData }) => {
-    // Filter section data
+const ScrollSpy = (props) => {
+    const { sectionsData } = props;
+
     const isMobile = useIsMobile();
-    sectionsData = isMobile
+    const displaySections = isMobile
         ? sectionsData.filter((data) => !data.pcOnly)
         : sectionsData.filter((data) => !data.mobileOnly);
+    const pcSections = sectionsData.filter((data) => !data.mobileOnly);
 
-    const [activeSection, setActiveSection] = useState(sectionsData[0].id);
-
-    const sectionRefs = sectionsData.map(() => useRef(null));
+    const [activeSection, setActiveSection] = useState(displaySections[0].id);
+    const sectionRefs = pcSections.map(() => useRef(null));
     const targetSelectedRef = useRef(null);
 
     const handleScroll = () => {
@@ -26,19 +27,19 @@ const ScrollSpy = ({ sectionsData }) => {
             return;
         };
 
-        for (let i = 0; i < sectionsData.length - 1; i++) {
+        for (let i = 0; i < pcSections.length - 1; i++) {
             const halfwayOfNextSection =
                 sectionRefs[i + 1].current.offsetTop - sectionRefs[i + 1].current.offsetHeight / 2;
 
             if (window.scrollY < halfwayOfNextSection) {
-                if (isWithinTarget(sectionsData[i].id)) {
-                    setAndResetActive(sectionsData[i].id);
+                if (isWithinTarget(pcSections[i].id)) {
+                    setAndResetActive(pcSections[i].id);
                     return;
                 }
             }
         }
 
-        const lastSectionId = sectionsData[sectionsData.length - 1].id;
+        const lastSectionId = pcSections[pcSections.length - 1].id;
         if (isWithinTarget(lastSectionId)) {
             setAndResetActive(lastSectionId);
             return;
@@ -46,18 +47,19 @@ const ScrollSpy = ({ sectionsData }) => {
     };
 
     useEffect(() => {
+        if (isMobile) return;
         window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [isMobile]);
 
     return (
         <>
-            {(activeSection !== sectionsData[0].id || !sectionsData[0].hidden) && (
+            {(activeSection !== pcSections[0].id || !pcSections[0].hidden) && (
                 <div className='scroll-menu'>
-                    {sectionsData.map((section, index) => {
+                    {pcSections.map((section, index) => {
                         if (section.hidden) return;
                         return (
                             <div
@@ -65,8 +67,8 @@ const ScrollSpy = ({ sectionsData }) => {
                                 className={classNames('scroll-menu__item', {
                                     'scroll-menu__item--active':
                                         activeSection === section.id ||
-                                        (activeSection === sectionsData[index + 1]?.id &&
-                                            sectionsData[index + 1].merged),
+                                        (activeSection === pcSections[index + 1]?.id &&
+                                            pcSections[index + 1].merged),
                                 })}
                                 style={{
                                     display: section.merged ? 'none' : 'block',
@@ -82,32 +84,12 @@ const ScrollSpy = ({ sectionsData }) => {
                 </div>
             )}
 
-            {sectionsData.map((section, index) => {
+            {displaySections.map((section, index) => {
                 return (
-                    <div key={section.id} ref={sectionRefs[index]}>
+                    <div key={section.id} ref={!isMobile ? sectionRefs[index] : null}>
                         {section.Component}
                     </div>
                 );
-
-                const both = !section.pcOnly && !section.mobileOnly;
-
-                if (isMobile) {
-                    return (
-                        (both || section.mobileOnly) && (
-                            <div key={section.id} ref={sectionRefs[index]}>
-                                {section.Component}
-                            </div>
-                        )
-                    );
-                } else {
-                    return (
-                        (both || section.pcOnly) && (
-                            <div key={section.id} ref={sectionRefs[index]}>
-                                {section.Component}
-                            </div>
-                        )
-                    );
-                }
             })}
         </>
     );

@@ -1,4 +1,4 @@
-export const OPTION1_DATA = [
+export const CAR_COLOR_DATA = [
     {
         imageUrl: 'https://www.aion.com.cn/web/pc/images/aion-s-new/6-1.png?v=1649902692806',
         mobileImageUrl: 'https://www.aion.com.cn/web/m/images/aion-s/color-0.png?v=1649904877410',
@@ -19,7 +19,7 @@ export const OPTION1_DATA = [
     },
 ];
 
-export const OPTION2_DATA = [
+export const INTERIOR_COLOR_DATA = [
     {
         imageUrl: 'https://www.aion.com.cn/web/pc/images/aion-s-new/7-1.png',
         mobileImageUrl: 'https://www.aion.com.cn/web/m/images/aion-s/interior-1.png',
@@ -34,7 +34,7 @@ export const OPTION2_DATA = [
     },
 ];
 
-export const OPTION3_DATA = [
+export const BATTERY_DATA = [
     {
         imageUrl: 'https://www.aion.com.cn/web/pc/images/aion-s-new/1-1.jpg?v=20230330',
         mobileImageUrl: 'https://www.aion.com.cn/web/m/images/aion-s/1-0.jpg?v=1691548923808',
@@ -52,7 +52,7 @@ export const OPTION3_DATA = [
     },
 ];
 
-export const OPTION4_DATA = [
+export const SPACE_DATA = [
     {
         imageUrl: 'https://www.aion.com.cn/web/pc/images/aion-s-new/2-1.jpeg?v=1691548923807',
         mobileImageUrl: 'https://www.aion.com.cn/web/m/images/aion-s/2-0.jpeg?v=1691548923807',
@@ -65,7 +65,7 @@ export const OPTION4_DATA = [
     },
 ];
 
-export const OPTION5_DATA = [
+export const LOOKS_DATA = [
     {
         imageUrl: 'https://www.aion.com.cn/web/pc/images/aion-s-new/4-1.png',
         mobileImageUrl: 'https://www.aion.com.cn/web/m/images/aion-s/4-0.png',
@@ -78,7 +78,7 @@ export const OPTION5_DATA = [
     },
 ];
 
-export const OPTION6_DATA = [
+export const RIM_DATA = [
     {
         mobileImageUrl: 'https://www.aion.com.cn/web/m/images/aion-s/wheel-1.png',
         colorImageUrl: 'https://www.aion.com.cn/web/m/images/aion-s/wheel1.png',

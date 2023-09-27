@@ -1,6 +1,6 @@
 import React from 'react';
 import { TransformSlider, Section, InfiniteDragSlider } from '../../components';
-import { OPTION1_DATA, OPTION2_DATA } from '../../constants/frame4';
+import { BRANCH_DATA, SMART_COCKPIT_DATA } from '../../constants/HyperLabPage';
 import useIsMobile from '../../hooks/useIsMobile';
 import './HyperLabPage.scss';
 
@@ -39,41 +39,27 @@ function HyperLabPage(props) {
                 src='https://www.aion.com.cn/web/pc/images/website-science/tech-s1-bg-new.jpg'
                 mobileSrc='https://www.aion.com.cn/web/m/images/website-science/tech-s1-bg-new.png'
             />
-            {!isMobile ? (
-                <TransformSlider optionsData={OPTION1_DATA} />
-            ) : (
-                <InfiniteDragSlider optionsData={OPTION1_DATA} />
-            )}
 
             {!isMobile ? (
-                <div className='s3'>
-                    <div className='s3-container'>
-                        <div className='s3-image-item'></div>
-                        <div className='s3-image-item'></div>
-                        <div className='s3-image-item'></div>
+                <>
+                    <TransformSlider optionsData={BRANCH_DATA} />
+                    <div className='s3'>
+                        <div className='s3-container'>
+                            <div className='s3-image-item'></div>
+                            <div className='s3-image-item'></div>
+                            <div className='s3-image-item'></div>
+                        </div>
                     </div>
-                </div>
+                    <TransformSlider optionsData={SMART_COCKPIT_DATA} />
+                </>
             ) : (
                 <>
-                    <Section
-                        alt=''
-                        mobileSrc='https://www.aion.com.cn/web/m/images/website-science/s3-1.jpg'
-                    />
-                    <Section
-                        alt=''
-                        mobileSrc='https://www.aion.com.cn/web/m/images/website-science/s3-2.jpg'
-                    />
-                    <Section
-                        alt=''
-                        mobileSrc='https://www.aion.com.cn/web/m/images/website-science/s3-3.jpg'
-                    />
+                    <InfiniteDragSlider optionsData={BRANCH_DATA} />
+                    <Section mobileSrc='https://www.aion.com.cn/web/m/images/website-science/s3-1.jpg' />
+                    <Section mobileSrc='https://www.aion.com.cn/web/m/images/website-science/s3-2.jpg' />
+                    <Section mobileSrc='https://www.aion.com.cn/web/m/images/website-science/s3-3.jpg' />
+                    <InfiniteDragSlider optionsData={SMART_COCKPIT_DATA} />
                 </>
-            )}
-
-            {!isMobile ? (
-                <TransformSlider optionsData={OPTION2_DATA} />
-            ) : (
-                <InfiniteDragSlider optionsData={OPTION2_DATA} />
             )}
 
             <Section

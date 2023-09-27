@@ -3,11 +3,11 @@ import Profiles from './Profiles';
 import WaseBox from './WaseBox';
 import GuideModal from './GuideModal';
 import { InfiniteDragSlider, VideoFrame } from '../../components';
-import { OPTION_DATA, BOXES } from '../../constants/about2';
+import { OPTION_DATA, BOXES } from '../../constants/UnicornPage';
 import useIsMobile from '../../hooks/useIsMobile';
-import './About02Page.scss';
+import './UnicornPage.scss';
 
-function About02Page(props) {
+function UnicornPage(props) {
     const isMobile = useIsMobile();
     const [clicked, setClicked] = useState(false);
     const [openModal, setOpenModal] = useState(false);
@@ -137,4 +137,4 @@ function About02Page(props) {
     );
 }
 
-export default About02Page;
+export default UnicornPage;

@@ -1,4 +1,4 @@
-export const OPTION_DATA = [
+export const SERVICE_DATA = [
     {
         imageUrl:
             'https://www.aion.com.cn/Public/Uploads/Picture/images/2023/01/854319596587115592575676589585.jpg',
